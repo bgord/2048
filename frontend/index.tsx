@@ -1,5 +1,6 @@
 import { h, render } from "preact";
 import { useEffect } from "preact/hooks";
+import { random } from "lodash";
 import useStatemachine from "@cassiozen/usestatemachine";
 
 type TileType = number | null;
@@ -50,6 +51,14 @@ class Game {
   static isProperMove(value: string): value is MoveType {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
+
+  static initializeBoard() {
+    const board = Game.emptyBoard;
+    const randomTileIndex = random(board.length - 1);
+    board[randomTileIndex] = 2;
+
+    return board;
+  }
 }
 
 function App() {
@@ -57,7 +66,15 @@ function App() {
     context: { board: Game.emptyBoard, score: Game.defaultScore },
     initial: "idle",
     states: {
-      idle: { on: { START: "playing" } },
+      idle: {
+        on: { START: "playing" },
+        effect({ setContext }) {
+          setContext((context) => ({
+            ...context,
+            board: Game.initializeBoard(),
+          }));
+        },
+      },
       playing: {
         on: {
           ArrowUp: "playing",
