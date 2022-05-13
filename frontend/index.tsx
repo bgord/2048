@@ -1,4 +1,5 @@
 import { h, render } from "preact";
+import { useEffect } from "preact/hooks";
 import useStatemachine from "@cassiozen/usestatemachine";
 
 type TileType = number | null;
@@ -71,6 +72,12 @@ function App() {
     },
   });
 
+  useEffect(() => {
+    document.body.addEventListener("keydown", (event) =>
+      Game.isProperMove(event.key) ? send(event.key) : undefined
+    );
+  }, []);
+
   return (
     <main
       data-display="flex"
@@ -103,10 +110,6 @@ function App() {
             data-bc="gray-400"
             data-bw="1"
             style={{ maxWidth: "402px" }}
-            onKeyDown={(event) =>
-              Game.isProperMove(event.key) ? send(event.key) : undefined
-            }
-            tabIndex={1}
           >
             {state.context.board.map((tile, index) => (
               <li
