@@ -54,10 +54,23 @@ class Game {
 
   static initializeBoard() {
     const board = Game.emptyBoard;
+
     const randomTileIndex = random(board.length - 1);
     board[randomTileIndex] = 2;
 
     return board;
+  }
+
+  static getScore(board: BoardType) {
+    let score = Game.defaultScore;
+
+    for (const tile of board) {
+      if (tile && tile > score) {
+        score = tile;
+      }
+    }
+
+    return score;
   }
 }
 
@@ -69,9 +82,11 @@ function App() {
       idle: {
         on: { START: "playing" },
         effect({ setContext }) {
-          setContext((context) => ({
-            ...context,
-            board: Game.initializeBoard(),
+          const board = Game.initializeBoard();
+
+          setContext(() => ({
+            score: Game.getScore(board),
+            board,
           }));
         },
       },
@@ -83,6 +98,14 @@ function App() {
           ArrowLeft: "playing",
           FINISH: "finished",
           RESET: "idle",
+        },
+        effect({ event, setContext }) {
+          if (event.type.startsWith("Arrow")) {
+            setContext((context) => ({
+              ...context,
+              score: Game.getScore(context.board),
+            }));
+          }
         },
       },
       finished: { on: { PLAY_AGAIN: "idle" } },
