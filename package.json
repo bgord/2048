@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@bgord/design": "^0.27.36",
+    "@cassiozen/usestatemachine": "^1.0.1",
     "lodash": "^4.17.21",
     "preact": "^10.6.4",
     "react": "npm:@preact/compat@^17.0.3",
