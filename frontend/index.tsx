@@ -44,6 +44,8 @@ class Game {
     null,
   ];
 
+  static defaultScore = 0;
+
   static isProperMove(value: string): value is MoveType {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
@@ -51,7 +53,7 @@ class Game {
 
 function App() {
   const [state, send] = useStatemachine({
-    context: { board: Game.emptyBoard, score: 0 },
+    context: { board: Game.emptyBoard, score: Game.defaultScore },
     initial: "idle",
     states: {
       idle: { on: { START: "playing" } },
@@ -121,6 +123,42 @@ function App() {
               </li>
             ))}
           </ul>
+
+          <div data-display="flex" data-direction="column" data-mt="48">
+            <button
+              class="c-button"
+              data-variant="bare"
+              onClick={() => send("ArrowUp")}
+            >
+              Up
+            </button>
+            <div data-mx="auto">
+              <button
+                class="c-button"
+                data-variant="bare"
+                data-mx="24"
+                onClick={() => send("ArrowLeft")}
+              >
+                Left
+              </button>
+              <button
+                class="c-button"
+                data-variant="bare"
+                data-mx="24"
+                onClick={() => send("ArrowDown")}
+              >
+                Down
+              </button>
+              <button
+                class="c-button"
+                data-variant="bare"
+                data-mx="24"
+                onClick={() => send("ArrowRight")}
+              >
+                Right
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </main>
