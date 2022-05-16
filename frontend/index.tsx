@@ -148,9 +148,22 @@ function App() {
             The game of 2048
           </h2>
 
-          <h3 data-mx="auto" data-mb="48">
-            Score: {state.context.score}
-          </h3>
+          <div
+            data-display="flex"
+            data-cross="center"
+            data-main="between"
+            data-mb="24"
+          >
+            <h3>Score: {state.context.score}</h3>
+
+            <button
+              class="c-button"
+              data-variant="secondary"
+              onClick={() => send("RESET")}
+            >
+              Reset
+            </button>
+          </div>
 
           <ul
             data-display="flex"
