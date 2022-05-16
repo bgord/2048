@@ -3,7 +3,7 @@ import { useEffect } from "preact/hooks";
 import { random } from "lodash";
 import useStatemachine from "@cassiozen/usestatemachine";
 
-type TileType = number | null;
+type TileType = { id: number; value: number | null };
 
 type MoveType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
 
@@ -28,22 +28,22 @@ type BoardType = [
 
 class Game {
   static emptyBoard: BoardType = [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    { id: 1, value: null },
+    { id: 2, value: null },
+    { id: 3, value: null },
+    { id: 4, value: null },
+    { id: 5, value: null },
+    { id: 6, value: null },
+    { id: 7, value: null },
+    { id: 8, value: null },
+    { id: 9, value: null },
+    { id: 10, value: null },
+    { id: 11, value: null },
+    { id: 12, value: null },
+    { id: 13, value: null },
+    { id: 14, value: null },
+    { id: 15, value: null },
+    { id: 16, value: null },
   ];
 
   static defaultScore = 0;
@@ -52,25 +52,46 @@ class Game {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
+  static handleMove(board: BoardType, type: MoveType): BoardType {
+    const randomTileId = Game.getRandomEmptyTileId(board);
+
+    return board.map((tile) =>
+      tile.id === randomTileId ? { ...tile, value: 2 } : tile
+    ) as BoardType;
+  }
+
   static initializeBoard(): BoardType {
     const board = Array.from(Game.emptyBoard) as BoardType;
 
-    const randomTileIndex = random(board.length - 1);
-    board[randomTileIndex] = 2;
+    const randomTileId = Game.getRandomEmptyTileId(board);
 
-    return board;
+    return board.map((tile) =>
+      tile.id === randomTileId ? { ...tile, value: 2 } : tile
+    ) as BoardType;
+  }
+
+  static hasGameEnded(board: BoardType): boolean {
+    return board.every((tile) => tile.value !== null);
   }
 
   static getScore(board: BoardType) {
     let score = Game.defaultScore;
 
     for (const tile of board) {
-      if (tile && tile > score) {
-        score = tile;
+      if (tile?.value && tile.value > score) {
+        score = tile.value;
       }
     }
 
     return score;
+  }
+
+  private static getRandomEmptyTileId(board: BoardType): TileType["id"] {
+    const emptyTiles = board.filter((tile) => tile.value === null);
+
+    const randomTileIndex = random(emptyTiles.length - 1);
+
+    return emptyTiles[randomTileIndex].id;
   }
 }
 
@@ -106,10 +127,18 @@ function App() {
           FINISH: "finished",
           RESET: "idle",
         },
-        effect({ event, setContext }) {
+        effect({ context, event, setContext, send }) {
           if (event.type.startsWith("Arrow")) {
+            if (!Game.isProperMove(event.type)) return;
+
+            const boardAfterMove = Game.handleMove(context.board, event.type);
+
+            if (Game.hasGameEnded(boardAfterMove)) {
+              return send("FINISH");
+            }
+
             setContext((context) => ({
-              ...context,
+              board: boardAfterMove,
               score: Game.getScore(context.board),
             }));
           }
@@ -182,7 +211,7 @@ function App() {
                 key={index}
                 style={{ height: "100px", width: "100px" }}
               >
-                {tile}
+                {tile.value}
               </li>
             ))}
           </ul>
