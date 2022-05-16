@@ -52,22 +52,14 @@ class Game {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
-  static handleMove(board: BoardType, type: MoveType): BoardType {
-    const randomTileId = Game.getRandomEmptyTileId(board);
-
-    return board.map((tile) =>
-      tile.id === randomTileId ? { ...tile, value: 2 } : tile
-    ) as BoardType;
-  }
-
   static initializeBoard(): BoardType {
     const board = Array.from(Game.emptyBoard) as BoardType;
 
-    const randomTileId = Game.getRandomEmptyTileId(board);
+    return Game.spawnRandomTile(board);
+  }
 
-    return board.map((tile) =>
-      tile.id === randomTileId ? { ...tile, value: 2 } : tile
-    ) as BoardType;
+  static handleMove(board: BoardType, type: MoveType): BoardType {
+    return this.spawnRandomTile(board);
   }
 
   static hasGameEnded(board: BoardType): boolean {
@@ -86,12 +78,20 @@ class Game {
     return score;
   }
 
+  private static spawnRandomTile(board: BoardType): BoardType {
+    const randomEmptyTileId = Game.getRandomEmptyTileId(board);
+
+    return board.map((tile) =>
+      tile.id === randomEmptyTileId ? { ...tile, value: 2 } : tile
+    ) as BoardType;
+  }
+
   private static getRandomEmptyTileId(board: BoardType): TileType["id"] {
     const emptyTiles = board.filter((tile) => tile.value === null);
 
-    const randomTileIndex = random(emptyTiles.length - 1);
+    const randomEmptyTileIndex = random(emptyTiles.length - 1);
 
-    return emptyTiles[randomTileIndex].id;
+    return emptyTiles[randomEmptyTileIndex].id;
   }
 }
 
