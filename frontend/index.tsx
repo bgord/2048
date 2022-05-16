@@ -52,8 +52,8 @@ class Game {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
-  static initializeBoard() {
-    const board = Game.emptyBoard;
+  static initializeBoard(): BoardType {
+    const board = Array.from(Game.emptyBoard) as BoardType;
 
     const randomTileIndex = random(board.length - 1);
     board[randomTileIndex] = 2;
@@ -82,12 +82,19 @@ function App() {
       idle: {
         on: { START: "playing" },
         effect({ setContext }) {
-          const board = Game.initializeBoard();
-
           setContext(() => ({
-            score: Game.getScore(board),
-            board,
+            score: Game.defaultScore,
+            board: Game.emptyBoard,
           }));
+
+          return () => {
+            const board = Game.initializeBoard();
+
+            setContext(() => ({
+              score: Game.getScore(board),
+              board,
+            }));
+          };
         },
       },
       playing: {
