@@ -46,13 +46,23 @@ export class Game {
 
   static handleMove(board: Board, type: MoveType): Board {
     if (type === "ArrowUp") {
-      board.getColumns().forEach((column) => MERGES.LEFT_GRAVITY(column));
-      board.getColumns().forEach((column) => MOVES.LEFT_GRAVITY(column));
+      board.getColumns().forEach((column) => MERGE.HANDLE(column));
+      board.getColumns().forEach((column) => MOVE.HANDLE(column));
+    }
+
+    if (type === "ArrowRight") {
+      board.getRows().forEach((column) => MERGE.HANDLE(column.reverse()));
+      board.getRows().forEach((column) => MOVE.HANDLE(column.reverse()));
+    }
+
+    if (type === "ArrowDown") {
+      board.getColumns().forEach((row) => MERGE.HANDLE(row.reverse()));
+      board.getColumns().forEach((row) => MOVE.HANDLE(row.reverse()));
     }
 
     if (type === "ArrowLeft") {
-      board.getRows().forEach((row) => MERGES.LEFT_GRAVITY(row));
-      board.getRows().forEach((row) => MOVES.LEFT_GRAVITY(row));
+      board.getRows().forEach((row) => MERGE.HANDLE(row));
+      board.getRows().forEach((row) => MOVE.HANDLE(row));
     }
 
     return board;
@@ -75,8 +85,8 @@ export class Game {
   }
 }
 
-const MERGES = {
-  LEFT_GRAVITY: (tiles: Tile[]) => {
+const MERGE = {
+  HANDLE: (tiles: Tile[]) => {
     const merges = [
       { tiles: [tiles[0], tiles[1]] },
       { tiles: [tiles[0], tiles[2]], condition: tiles[1].isEmpty() },
@@ -98,8 +108,8 @@ const MERGES = {
   },
 };
 
-const MOVES = {
-  LEFT_GRAVITY: (tiles: Tile[]) => {
+const MOVE = {
+  HANDLE: (tiles: Tile[]) => {
     const moves = [
       { target: tiles[0], source: tiles[1] },
       { target: tiles[0], source: tiles[2], condition: tiles[1].isEmpty() },
