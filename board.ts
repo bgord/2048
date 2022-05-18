@@ -26,7 +26,6 @@ export class Board {
 
   constructor(state: BoardStateType = Board.getEmpty()) {
     this.state = state;
-    this.spawnRandomTile();
   }
 
   static getEmpty(): BoardStateType {

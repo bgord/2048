@@ -1,30 +1,30 @@
 import { h, render } from "preact";
 import { useEffect } from "preact/hooks";
-import useStatemachine from "@cassiozen/usestatemachine";
+import useStatemachine, { t } from "@cassiozen/usestatemachine";
 
 import { Game } from "../game";
+import { Board } from "../board";
 
 function App() {
   const [state, send] = useStatemachine({
-    context: { board: Game.emptyBoard, score: Game.defaultScore },
+    schema: {
+      context: t<{ board: Board; score: number }>(),
+    },
+    context: {
+      board: Game.initializeBoard(),
+      score: Game.defaultScore,
+    },
     initial: "idle",
     states: {
       idle: {
         on: { START: "playing" },
         effect({ setContext }) {
+          const board = Game.initializeBoard();
+
           setContext(() => ({
-            score: Game.defaultScore,
-            board: Game.emptyBoard,
+            score: Game.getScore(board),
+            board,
           }));
-
-          return () => {
-            const board = Game.initializeBoard();
-
-            setContext(() => ({
-              score: Game.getScore(board),
-              board,
-            }));
-          };
         },
       },
       playing: {
@@ -109,7 +109,7 @@ function App() {
             data-bw="1"
             style={{ maxWidth: "402px" }}
           >
-            {state.context.board.map((tile, index) => (
+            {state.context.board.state.map((tile, index) => (
               <li
                 data-display="flex"
                 data-main="center"

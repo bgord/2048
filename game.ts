@@ -11,8 +11,10 @@ export class Game {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
-  static initialize(): Board {
-    return new Board();
+  static initializeBoard(): Board {
+    const board = new Board();
+    board.spawnRandomTile();
+    return board;
   }
 
   static handleMove(board: Board, type: MoveType): Board {
