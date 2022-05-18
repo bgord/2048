@@ -21,46 +21,24 @@ describe("game", () => {
   });
 
   it("know if game has ended", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1, 2),
-      new Tile(2, 2),
-      new Tile(3, 2),
-      new Tile(4, 2),
-      new Tile(5, 2),
-      new Tile(6, 2),
-      new Tile(7, 2),
-      new Tile(8, 2),
-      new Tile(9, 2),
-      new Tile(10, 2),
-      new Tile(11, 2),
-      new Tile(12, 2),
-      new Tile(13, 2),
-      new Tile(14, 2),
-      new Tile(15, 2),
-      new Tile(16, 2),
+      new Tile(1, 2), new Tile(2, 2), new Tile(3, 2), new Tile(4, 2),
+      new Tile(5, 2), new Tile(6, 2), new Tile(7, 2), new Tile(8, 2),
+      new Tile(9, 2), new Tile(10, 2), new Tile(11, 2), new Tile(12, 2),
+      new Tile(13, 2), new Tile(14, 2), new Tile(15, 2), new Tile(16, 2),
     ]);
 
     expect(Game.hasGameEnded(board)).to.eq(true);
   });
 
   it("should handle ArrowUp basic scenario", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1, 2),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4),
-      new Tile(5, 2),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16),
+      new Tile(1, 2), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5, 2), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -73,23 +51,12 @@ describe("game", () => {
   });
 
   it("should handle ArrowUp 3 in a column scenario", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4, 2),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8, 2),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12, 2),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -103,23 +70,12 @@ describe("game", () => {
   });
 
   it("should handle ArrowUp distant scenario 1", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4, 2),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12, 2),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -132,23 +88,12 @@ describe("game", () => {
   });
 
   it("should handle ArrowUp distant scenario 2", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4, 2),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16, 2),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -161,23 +106,12 @@ describe("game", () => {
   });
 
   it("should handle ArrowUp double merging", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4, 2),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8, 2),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12, 2),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16, 2),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -192,23 +126,12 @@ describe("game", () => {
   });
 
   it("should handle ArrowUp non-moveable scenario 1", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4, 2),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8, 4),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12, 2),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 4),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -222,23 +145,12 @@ describe("game", () => {
   });
 
   it("should handle ArrowUp non-moveable scenario 2", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4, 2),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12, 8),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16, 2),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 8),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -253,23 +165,12 @@ describe("game", () => {
   });
 
   it("should handle ArrowUp non-moveable scenario 3", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8, 2),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12, 8),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16, 2),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 8),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -283,24 +184,13 @@ describe("game", () => {
     expect(numberOfTilesWithValue).to.eq(3);
   });
 
-  it.only("should handle ArrowUp movement alone 1", () => {
+  it("should handle ArrowUp movement alone 1", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12, 8),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 8),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -314,24 +204,13 @@ describe("game", () => {
     expect(numberOfTilesWithValue).to.eq(1);
   });
 
-  it.only("should handle ArrowUp movement alone 2", () => {
+  it("should handle ArrowUp movement alone 2", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16, 8),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 8),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -345,24 +224,13 @@ describe("game", () => {
     expect(numberOfTilesWithValue).to.eq(1);
   });
 
-  it.only("should handle ArrowUp movement alone 3", () => {
+  it("should handle ArrowUp movement alone 3", () => {
+    // prettier-ignore
     const board = new Board([
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4, 4),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16, 2),
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
     const after = Game.handleMove(board, "ArrowUp");
@@ -373,6 +241,218 @@ describe("game", () => {
     expect(after.state[7].value).to.eq(2);
     expect(after.state[11].value).to.eq(null);
     expect(after.state[15].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(2);
+  });
+
+  it("should handle ArrowLeft basic scenario", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1, 2), new Tile(2, 2), new Tile(3), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[0].value).to.eq(4);
+    expect(after.state[1].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(1);
+  });
+
+  it("should handle ArrowLeft 3 in a column scenario", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13, 2), new Tile(14, 2), new Tile(15, 2), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[12].value).to.eq(4);
+    expect(after.state[13].value).to.eq(2);
+    expect(after.state[14].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(2);
+  });
+
+  it("should handle ArrowLeft distant scenario 1", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1, 2), new Tile(2), new Tile(3, 2), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[0].value).to.eq(4);
+    expect(after.state[2].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(1);
+  });
+
+  it("should handle ArrowLeft distant scenario 2", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1, 2), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[0].value).to.eq(4);
+    expect(after.state[3].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(1);
+  });
+
+  it("should handle ArrowLeft double merging", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5, 2), new Tile(6, 2), new Tile(7, 2), new Tile(8, 2),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[4].value).to.eq(4);
+    expect(after.state[5].value).to.eq(4);
+    expect(after.state[6].value).to.eq(null);
+    expect(after.state[7].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(2);
+  });
+
+  it("should handle ArrowLeft non-moveable scenario 1", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1, 2), new Tile(2, 4), new Tile(3, 2), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[0].value).to.eq(2);
+    expect(after.state[1].value).to.eq(4);
+    expect(after.state[2].value).to.eq(2);
+    expect(numberOfTilesWithValue).to.eq(3);
+  });
+
+  it("should handle ArrowLeft non-moveable scenario 2", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1, 2), new Tile(2), new Tile(3, 8), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[0].value).to.eq(2);
+    expect(after.state[1].value).to.eq(8);
+    expect(after.state[2].value).to.eq(2);
+    expect(after.state[3].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(3);
+  });
+
+  it("should handle ArrowLeft non-moveable scenario 3", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1), new Tile(2, 2), new Tile(3, 8), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[0].value).to.eq(2);
+    expect(after.state[1].value).to.eq(8);
+    expect(after.state[2].value).to.eq(2);
+    expect(after.state[3].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(3);
+  });
+
+  it("should handle ArrowLeft movement alone 1", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11, 8), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[8].value).to.eq(8);
+    expect(after.state[9].value).to.eq(null);
+    expect(after.state[10].value).to.eq(null);
+    expect(after.state[11].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(1);
+  });
+
+  it("should handle ArrowLeft movement alone 2", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 8),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[12].value).to.eq(8);
+    expect(after.state[13].value).to.eq(null);
+    expect(after.state[14].value).to.eq(null);
+    expect(after.state[15].value).to.eq(null);
+    expect(numberOfTilesWithValue).to.eq(1);
+  });
+
+  it("should handle ArrowLeft movement alone 3", () => {
+    // prettier-ignore
+    const board = new Board([
+      new Tile(1, 4), new Tile(2), new Tile(3), new Tile(4, 2),
+      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
+      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
+      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+    ]);
+
+    const after = Game.handleMove(board, "ArrowLeft");
+
+    const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
+
+    expect(after.state[0].value).to.eq(4);
+    expect(after.state[1].value).to.eq(2);
+    expect(after.state[2].value).to.eq(null);
+    expect(after.state[3].value).to.eq(null);
     expect(numberOfTilesWithValue).to.eq(2);
   });
 });

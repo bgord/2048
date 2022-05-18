@@ -95,6 +95,56 @@ export class Game {
       }
     }
 
+    if (type === "ArrowLeft") {
+      const rowsMerge = board.getRows();
+
+      for (const tile of rowsMerge) {
+        const merges = [
+          { tiles: [tile[0], tile[1]] },
+          { tiles: [tile[0], tile[2]], condition: tile[1].isEmpty() },
+          {
+            tiles: [tile[0], tile[3]],
+            condition: tile[1].isEmpty() && tile[2].isEmpty(),
+          },
+          { tiles: [tile[1], tile[2]] },
+          { tiles: [tile[1], tile[3]], condition: tile[2].isEmpty() },
+          { tiles: [tile[2], tile[3]] },
+        ];
+
+        for (const merge of merges) {
+          if (!shouldMerge(merge)) continue;
+
+          merge.tiles[0].double();
+          merge.tiles[1].clear();
+        }
+      }
+
+      const rowsMove = board.getRows();
+
+      for (const tile of rowsMove) {
+        const moves = [
+          { target: tile[0], source: tile[1] },
+          { target: tile[0], source: tile[2], condition: tile[1].isEmpty() },
+          {
+            target: tile[0],
+            source: tile[3],
+            condition:
+              tile[0].isEmpty() && tile[1].isEmpty() && tile[2].isEmpty(),
+          },
+          { target: tile[1], source: tile[2] },
+          { target: tile[1], source: tile[3], condition: tile[2].isEmpty() },
+          { target: tile[2], source: tile[3] },
+        ];
+
+        for (const move of moves) {
+          if (!shouldMove(move)) continue;
+
+          move.target.copyFrom(move.source);
+          move.source.clear();
+        }
+      }
+    }
+
     return board;
   }
 

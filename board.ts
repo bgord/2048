@@ -90,4 +90,25 @@ export class Board {
 
     return columns;
   }
+
+  getRows() {
+    const rows: Tile[][] = [[], [], [], []];
+
+    for (const tile of this.state) {
+      if ([1, 2, 3, 4].includes(tile.id)) {
+        rows[0].push(tile);
+      }
+      if ([5, 6, 7, 8].includes(tile.id)) {
+        rows[1].push(tile);
+      }
+      if ([9, 10, 11, 12].includes(tile.id)) {
+        rows[2].push(tile);
+      }
+      if ([13, 14, 15, 16].includes(tile.id)) {
+        rows[3].push(tile);
+      }
+    }
+
+    return rows;
+  }
 }
