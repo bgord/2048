@@ -1,35 +1,11 @@
 import { random } from "lodash";
+
 import { Tile } from "./tile";
 import { Board } from "./board";
+import { Mover } from "./mover";
+import { Merger } from "./merger";
 
 export type MoveType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
-
-function shouldMerge({
-  tiles: [first, second],
-  condition = true,
-}: {
-  tiles: Tile[];
-  condition?: boolean;
-}): boolean {
-  return (
-    condition &&
-    first.hasValue() &&
-    second.hasValue() &&
-    first.isEqualTo(second)
-  );
-}
-
-function shouldMove({
-  target,
-  source,
-  condition = true,
-}: {
-  target: Tile;
-  source: Tile;
-  condition?: boolean;
-}): boolean {
-  return condition && target.isEmpty() && source.hasValue();
-}
 
 export class Game {
   static defaultScore = 0;
@@ -46,23 +22,23 @@ export class Game {
 
   static handleMove(board: Board, type: MoveType): Board {
     if (type === "ArrowUp") {
-      board.getColumns().forEach((column) => MERGE.HANDLE(column));
-      board.getColumns().forEach((column) => MOVE.HANDLE(column));
+      board.getColumns().forEach((column) => Merger.handle(column));
+      board.getColumns().forEach((column) => Mover.handle(column));
     }
 
     if (type === "ArrowRight") {
-      board.getRows().forEach((column) => MERGE.HANDLE(column.reverse()));
-      board.getRows().forEach((column) => MOVE.HANDLE(column.reverse()));
+      board.getRows().forEach((column) => Merger.handle(column.reverse()));
+      board.getRows().forEach((column) => Mover.handle(column.reverse()));
     }
 
     if (type === "ArrowDown") {
-      board.getColumns().forEach((row) => MERGE.HANDLE(row.reverse()));
-      board.getColumns().forEach((row) => MOVE.HANDLE(row.reverse()));
+      board.getColumns().forEach((row) => Merger.handle(row.reverse()));
+      board.getColumns().forEach((row) => Mover.handle(row.reverse()));
     }
 
     if (type === "ArrowLeft") {
-      board.getRows().forEach((row) => MERGE.HANDLE(row));
-      board.getRows().forEach((row) => MOVE.HANDLE(row));
+      board.getRows().forEach((row) => Merger.handle(row));
+      board.getRows().forEach((row) => Mover.handle(row));
     }
 
     return board;
@@ -84,51 +60,3 @@ export class Game {
     return score;
   }
 }
-
-const MERGE = {
-  HANDLE: (tiles: Tile[]) => {
-    const merges = [
-      { tiles: [tiles[0], tiles[1]] },
-      { tiles: [tiles[0], tiles[2]], condition: tiles[1].isEmpty() },
-      {
-        tiles: [tiles[0], tiles[3]],
-        condition: tiles[1].isEmpty() && tiles[2].isEmpty(),
-      },
-      { tiles: [tiles[1], tiles[2]] },
-      { tiles: [tiles[1], tiles[3]], condition: tiles[2].isEmpty() },
-      { tiles: [tiles[2], tiles[3]] },
-    ];
-
-    for (const merge of merges) {
-      if (!shouldMerge(merge)) continue;
-
-      merge.tiles[0].double();
-      merge.tiles[1].clear();
-    }
-  },
-};
-
-const MOVE = {
-  HANDLE: (tiles: Tile[]) => {
-    const moves = [
-      { target: tiles[0], source: tiles[1] },
-      { target: tiles[0], source: tiles[2], condition: tiles[1].isEmpty() },
-      {
-        target: tiles[0],
-        source: tiles[3],
-        condition:
-          tiles[0].isEmpty() && tiles[1].isEmpty() && tiles[2].isEmpty(),
-      },
-      { target: tiles[1], source: tiles[2] },
-      { target: tiles[1], source: tiles[3], condition: tiles[2].isEmpty() },
-      { target: tiles[2], source: tiles[3] },
-    ];
-
-    for (const move of moves) {
-      if (!shouldMove(move)) continue;
-
-      move.target.copyFrom(move.source);
-      move.source.clear();
-    }
-  },
-};
