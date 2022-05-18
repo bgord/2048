@@ -46,103 +46,13 @@ export class Game {
 
   static handleMove(board: Board, type: MoveType): Board {
     if (type === "ArrowUp") {
-      const columnsMerge = board.getColumns();
-
-      for (const tile of columnsMerge) {
-        const merges = [
-          { tiles: [tile[0], tile[1]] },
-          { tiles: [tile[0], tile[2]], condition: tile[1].isEmpty() },
-          {
-            tiles: [tile[0], tile[3]],
-            condition: tile[1].isEmpty() && tile[2].isEmpty(),
-          },
-          { tiles: [tile[1], tile[2]] },
-          { tiles: [tile[1], tile[3]], condition: tile[2].isEmpty() },
-          { tiles: [tile[2], tile[3]] },
-        ];
-
-        for (const merge of merges) {
-          if (!shouldMerge(merge)) continue;
-
-          merge.tiles[0].double();
-          merge.tiles[1].clear();
-        }
-      }
-
-      const columnsMove = board.getColumns();
-
-      for (const tile of columnsMove) {
-        const moves = [
-          { target: tile[0], source: tile[1] },
-          { target: tile[0], source: tile[2], condition: tile[1].isEmpty() },
-          {
-            target: tile[0],
-            source: tile[3],
-            condition:
-              tile[0].isEmpty() && tile[1].isEmpty() && tile[2].isEmpty(),
-          },
-          { target: tile[1], source: tile[2] },
-          { target: tile[1], source: tile[3], condition: tile[2].isEmpty() },
-          { target: tile[2], source: tile[3] },
-        ];
-
-        for (const move of moves) {
-          if (!shouldMove(move)) continue;
-
-          move.target.copyFrom(move.source);
-          move.source.clear();
-        }
-      }
+      board.getColumns().forEach((column) => MERGES.LEFT_GRAVITY(column));
+      board.getColumns().forEach((column) => MOVES.LEFT_GRAVITY(column));
     }
 
     if (type === "ArrowLeft") {
-      const rowsMerge = board.getRows();
-
-      for (const tile of rowsMerge) {
-        const merges = [
-          { tiles: [tile[0], tile[1]] },
-          { tiles: [tile[0], tile[2]], condition: tile[1].isEmpty() },
-          {
-            tiles: [tile[0], tile[3]],
-            condition: tile[1].isEmpty() && tile[2].isEmpty(),
-          },
-          { tiles: [tile[1], tile[2]] },
-          { tiles: [tile[1], tile[3]], condition: tile[2].isEmpty() },
-          { tiles: [tile[2], tile[3]] },
-        ];
-
-        for (const merge of merges) {
-          if (!shouldMerge(merge)) continue;
-
-          merge.tiles[0].double();
-          merge.tiles[1].clear();
-        }
-      }
-
-      const rowsMove = board.getRows();
-
-      for (const tile of rowsMove) {
-        const moves = [
-          { target: tile[0], source: tile[1] },
-          { target: tile[0], source: tile[2], condition: tile[1].isEmpty() },
-          {
-            target: tile[0],
-            source: tile[3],
-            condition:
-              tile[0].isEmpty() && tile[1].isEmpty() && tile[2].isEmpty(),
-          },
-          { target: tile[1], source: tile[2] },
-          { target: tile[1], source: tile[3], condition: tile[2].isEmpty() },
-          { target: tile[2], source: tile[3] },
-        ];
-
-        for (const move of moves) {
-          if (!shouldMove(move)) continue;
-
-          move.target.copyFrom(move.source);
-          move.source.clear();
-        }
-      }
+      board.getRows().forEach((row) => MERGES.LEFT_GRAVITY(row));
+      board.getRows().forEach((row) => MOVES.LEFT_GRAVITY(row));
     }
 
     return board;
@@ -164,3 +74,51 @@ export class Game {
     return score;
   }
 }
+
+const MERGES = {
+  LEFT_GRAVITY: (tiles: Tile[]) => {
+    const merges = [
+      { tiles: [tiles[0], tiles[1]] },
+      { tiles: [tiles[0], tiles[2]], condition: tiles[1].isEmpty() },
+      {
+        tiles: [tiles[0], tiles[3]],
+        condition: tiles[1].isEmpty() && tiles[2].isEmpty(),
+      },
+      { tiles: [tiles[1], tiles[2]] },
+      { tiles: [tiles[1], tiles[3]], condition: tiles[2].isEmpty() },
+      { tiles: [tiles[2], tiles[3]] },
+    ];
+
+    for (const merge of merges) {
+      if (!shouldMerge(merge)) continue;
+
+      merge.tiles[0].double();
+      merge.tiles[1].clear();
+    }
+  },
+};
+
+const MOVES = {
+  LEFT_GRAVITY: (tiles: Tile[]) => {
+    const moves = [
+      { target: tiles[0], source: tiles[1] },
+      { target: tiles[0], source: tiles[2], condition: tiles[1].isEmpty() },
+      {
+        target: tiles[0],
+        source: tiles[3],
+        condition:
+          tiles[0].isEmpty() && tiles[1].isEmpty() && tiles[2].isEmpty(),
+      },
+      { target: tiles[1], source: tiles[2] },
+      { target: tiles[1], source: tiles[3], condition: tiles[2].isEmpty() },
+      { target: tiles[2], source: tiles[3] },
+    ];
+
+    for (const move of moves) {
+      if (!shouldMove(move)) continue;
+
+      move.target.copyFrom(move.source);
+      move.source.clear();
+    }
+  },
+};
