@@ -70,7 +70,7 @@ export class Board {
     return emptyTiles[randomEmptyTileIndex].id;
   }
 
-  private getColumns() {
+  getColumns() {
     const columns: Tile[][] = [[], [], [], []];
 
     for (const tile of this.state) {

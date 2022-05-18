@@ -41,6 +41,7 @@ function App() {
             if (!Game.isProperMove(event.type)) return;
 
             const boardAfterMove = Game.handleMove(context.board, event.type);
+            boardAfterMove.spawnRandomTile();
 
             if (Game.hasGameEnded(boardAfterMove)) {
               return send("FINISH");
