@@ -78,6 +78,27 @@ class Game {
     return score;
   }
 
+  private static getColumns(board: BoardType) {
+    const columns: TileType[][] = [[], [], [], []];
+
+    for (const tile of board) {
+      if ([1, 5, 9, 13].includes(tile.id)) {
+        columns[0].push(tile);
+      }
+      if ([2, 6, 10, 14].includes(tile.id)) {
+        columns[1].push(tile);
+      }
+      if ([3, 7, 11, 15].includes(tile.id)) {
+        columns[2].push(tile);
+      }
+      if ([4, 8, 12, 16].includes(tile.id)) {
+        columns[3].push(tile);
+      }
+    }
+
+    return columns;
+  }
+
   private static spawnRandomTile(board: BoardType): BoardType {
     const randomEmptyTileId = Game.getRandomEmptyTileId(board);
 
