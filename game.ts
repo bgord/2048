@@ -1,46 +1,45 @@
 import { random } from "lodash";
-
-export type TileType = { id: number; value: number | null };
+import { Tile } from "./tile";
 
 export type MoveType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
 
 export type BoardType = [
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType,
-  TileType
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile,
+  Tile
 ];
 
 export class Game {
   static emptyBoard: BoardType = [
-    { id: 1, value: null },
-    { id: 2, value: null },
-    { id: 3, value: null },
-    { id: 4, value: null },
-    { id: 5, value: null },
-    { id: 6, value: null },
-    { id: 7, value: null },
-    { id: 8, value: null },
-    { id: 9, value: null },
-    { id: 10, value: null },
-    { id: 11, value: null },
-    { id: 12, value: null },
-    { id: 13, value: null },
-    { id: 14, value: null },
-    { id: 15, value: null },
-    { id: 16, value: null },
+    new Tile(1),
+    new Tile(2),
+    new Tile(3),
+    new Tile(4),
+    new Tile(5),
+    new Tile(6),
+    new Tile(7),
+    new Tile(8),
+    new Tile(9),
+    new Tile(10),
+    new Tile(11),
+    new Tile(12),
+    new Tile(13),
+    new Tile(14),
+    new Tile(15),
+    new Tile(16),
   ];
 
   static defaultScore = 0;
@@ -60,7 +59,7 @@ export class Game {
   }
 
   static hasGameEnded(board: BoardType): boolean {
-    return board.every((tile) => tile.value !== null);
+    return board.every(Tile.hasValue);
   }
 
   static getScore(board: BoardType) {
@@ -76,7 +75,7 @@ export class Game {
   }
 
   private static getColumns(board: BoardType) {
-    const columns: TileType[][] = [[], [], [], []];
+    const columns: Tile[][] = [[], [], [], []];
 
     for (const tile of board) {
       if ([1, 5, 9, 13].includes(tile.id)) {
@@ -104,8 +103,8 @@ export class Game {
     ) as BoardType;
   }
 
-  private static getRandomEmptyTileId(board: BoardType): TileType["id"] {
-    const emptyTiles = board.filter((tile) => tile.value === null);
+  private static getRandomEmptyTileId(board: BoardType): Tile["id"] {
+    const emptyTiles = board.filter(Tile.isEmpty);
 
     const randomEmptyTileIndex = random(emptyTiles.length - 1);
 
