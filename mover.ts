@@ -30,7 +30,7 @@ export class Mover {
     }
   }
 
-  static shouldMove(config: ShouldMoveParamsType): boolean {
+  private static shouldMove(config: ShouldMoveParamsType): boolean {
     const condition = config.condition ?? true;
 
     return condition && config.target.isEmpty() && config.source.hasValue();

@@ -6,21 +6,6 @@ type ShouldMergeParamsType = {
 };
 
 export class Merger {
-  static shouldMerge(config: ShouldMergeParamsType): boolean {
-    const {
-      tiles: [first, second],
-    } = config;
-
-    const condition = config.condition ?? true;
-
-    return (
-      condition &&
-      first.hasValue() &&
-      second.hasValue() &&
-      first.isEqualTo(second)
-    );
-  }
-
   static handle(tiles: Tile[]) {
     const merges = [
       { tiles: [tiles[0], tiles[1]] },
@@ -40,5 +25,17 @@ export class Merger {
       merge.tiles[0].double();
       merge.tiles[1].clear();
     }
+  }
+
+  private static shouldMerge(config: ShouldMergeParamsType): boolean {
+    const [first, second] = config.tiles;
+    const condition = config.condition ?? true;
+
+    return (
+      condition &&
+      first.hasValue() &&
+      second.hasValue() &&
+      first.isEqualTo(second)
+    );
   }
 }
