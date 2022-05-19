@@ -20,7 +20,9 @@ export class Game {
     return board;
   }
 
-  static handleMove(board: Board, type: MoveType): Board {
+  static handleMove(board: Board, type: string): Board {
+    if (!Game.isProperMove(type)) return board;
+
     if (type === "ArrowUp") {
       board.getColumns().forEach((column) => Merger.handle(column));
       board.getColumns().forEach((column) => Mover.handle(column));
