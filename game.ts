@@ -28,7 +28,32 @@ export class Game {
   }
 
   static hasGameEnded(board: Board): boolean {
-    return board.isFull();
+    let numberOfPossibleActions = 0;
+
+    const columns = board.getColumns();
+    const rows = board.getRows();
+
+    for (const column of columns) {
+      if (Mover.simulate(column) || Mover.simulate(column.reverse())) {
+        numberOfPossibleActions++;
+      }
+
+      if (Merger.simulate(column) || Merger.simulate(column.reverse())) {
+        numberOfPossibleActions++;
+      }
+    }
+
+    for (const row of rows) {
+      if (Mover.simulate(row) || Mover.simulate(row.reverse())) {
+        numberOfPossibleActions++;
+      }
+
+      if (Merger.simulate(row) || Merger.simulate(row.reverse())) {
+        numberOfPossibleActions++;
+      }
+    }
+
+    return board.isFull() && numberOfPossibleActions === 0;
   }
 
   static getScore(board: Board) {
