@@ -7,24 +7,15 @@ import { Board } from "../board";
 
 function App() {
   const [state, send] = useStatemachine({
-    schema: {
-      context: t<{ board: Board; score: number }>(),
-    },
-    context: {
-      board: Game.initializeBoard(),
-      score: Game.defaultScore,
-    },
+    schema: { context: t<{ board: Board; score: number }>() },
+    context: { board: Game.initializeBoard(), score: Game.defaultScore },
     initial: "idle",
     states: {
       idle: {
         on: { START: "playing" },
         effect({ setContext }) {
           const board = Game.initializeBoard();
-
-          setContext(() => ({
-            score: Game.getScore(board),
-            board,
-          }));
+          setContext(() => ({ score: Game.getScore(board), board }));
         },
       },
       playing: {
