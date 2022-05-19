@@ -40,6 +40,10 @@ export class Board {
     return this;
   }
 
+  isFull(): boolean {
+    return this.state.every(Tile.hasValue);
+  }
+
   getColumns() {
     const columns: Tile[][] = [[], [], [], []];
 

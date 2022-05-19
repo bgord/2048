@@ -54,7 +54,7 @@ export class Game {
   }
 
   static hasGameEnded(board: Board): boolean {
-    return board.state.every(Tile.hasValue);
+    return board.isFull();
   }
 
   static getScore(board: Board) {
