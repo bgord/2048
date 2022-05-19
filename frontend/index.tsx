@@ -31,13 +31,16 @@ function App() {
         },
         effect({ context, event, setContext, send }) {
           if (event.type.startsWith("Arrow")) {
-            const board = Game.handleMove(context.board, event.type);
+            const game = Game.handleMove(context.board, event.type);
 
-            if (Game.hasGameEnded(board)) {
+            if (game.hasEnded) {
               return send("FINISH");
             }
 
-            setContext((context) => ({ board, score: Game.getScore(board) }));
+            setContext(() => ({
+              board: game.board,
+              score: Game.getScore(game.board),
+            }));
           }
         },
       },

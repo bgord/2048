@@ -5,6 +5,8 @@ import { Merger } from "./merger";
 
 export type ActionType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
 
+export type HandleMoveReturnType = { board: Board; hasEnded: boolean };
+
 export class Game {
   static defaultScore = 0;
 
@@ -18,42 +20,15 @@ export class Game {
     return board;
   }
 
-  static handleMove(board: Board, action: string): Board {
-    if (!Game.isProperAction(action)) return board;
+  static handleMove(board: Board, action: string): HandleMoveReturnType {
+    if (!Game.isProperAction(action)) {
+      return { board, hasEnded: Game.hasGameEnded(board) };
+    }
 
     Game._performAction(board, action);
     board.spawnRandomTile();
 
-    return board;
-  }
-
-  static hasGameEnded(board: Board): boolean {
-    let numberOfPossibleActions = 0;
-
-    const columns = board.getColumns();
-    const rows = board.getRows();
-
-    for (const column of columns) {
-      if (Mover.simulate(column) || Mover.simulate(column.reverse())) {
-        numberOfPossibleActions++;
-      }
-
-      if (Merger.simulate(column) || Merger.simulate(column.reverse())) {
-        numberOfPossibleActions++;
-      }
-    }
-
-    for (const row of rows) {
-      if (Mover.simulate(row) || Mover.simulate(row.reverse())) {
-        numberOfPossibleActions++;
-      }
-
-      if (Merger.simulate(row) || Merger.simulate(row.reverse())) {
-        numberOfPossibleActions++;
-      }
-    }
-
-    return board.isFull() && numberOfPossibleActions === 0;
+    return { board, hasEnded: Game.hasGameEnded(board) };
   }
 
   static getScore(board: Board) {
@@ -92,5 +67,34 @@ export class Game {
     }
 
     return board;
+  }
+
+  private static hasGameEnded(board: Board): boolean {
+    let numberOfPossibleActions = 0;
+
+    const columns = board.getColumns();
+    const rows = board.getRows();
+
+    for (const column of columns) {
+      if (Mover.simulate(column) || Mover.simulate(column.reverse())) {
+        numberOfPossibleActions++;
+      }
+
+      if (Merger.simulate(column) || Merger.simulate(column.reverse())) {
+        numberOfPossibleActions++;
+      }
+    }
+
+    for (const row of rows) {
+      if (Mover.simulate(row) || Mover.simulate(row.reverse())) {
+        numberOfPossibleActions++;
+      }
+
+      if (Merger.simulate(row) || Merger.simulate(row.reverse())) {
+        numberOfPossibleActions++;
+      }
+    }
+
+    return board.isFull() && numberOfPossibleActions === 0;
   }
 }
