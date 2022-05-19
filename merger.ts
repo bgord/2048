@@ -7,7 +7,23 @@ type ShouldMergeParamsType = {
 
 export class Merger {
   static handle(tiles: Tile[]) {
-    const merges = [
+    const merges = Merger.getMerges(tiles);
+
+    for (const merge of merges) {
+      if (!Merger.shouldMerge(merge)) continue;
+
+      merge.tiles[0].double();
+      merge.tiles[1].clear();
+    }
+  }
+
+  static simulate(tiles: Tile[]): boolean {
+    const merges = Merger.getMerges(tiles);
+    return merges.filter(Merger.shouldMerge).length > 0;
+  }
+
+  private static getMerges(tiles: Tile[]) {
+    return [
       { tiles: [tiles[0], tiles[1]] },
       { tiles: [tiles[0], tiles[2]], condition: tiles[1].isEmpty() },
       {
@@ -18,13 +34,6 @@ export class Merger {
       { tiles: [tiles[1], tiles[3]], condition: tiles[2].isEmpty() },
       { tiles: [tiles[2], tiles[3]] },
     ];
-
-    for (const merge of merges) {
-      if (!Merger.shouldMerge(merge)) continue;
-
-      merge.tiles[0].double();
-      merge.tiles[1].clear();
-    }
   }
 
   private static shouldMerge(config: ShouldMergeParamsType): boolean {
