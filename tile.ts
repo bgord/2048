@@ -6,6 +6,8 @@ export class Tile {
 
   value: TileValueType;
 
+  static newlySpawnedValue = 2;
+
   constructor(id: TileIdType, value: TileValueType = null) {
     this.id = id;
     this.value = value;

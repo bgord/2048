@@ -54,7 +54,7 @@ export class Board {
 
     for (const tile of this.state) {
       if (tile.id === randomEmptyTileId) {
-        tile.setValue(2);
+        tile.setValue(Tile.newlySpawnedValue);
       }
     }
 
