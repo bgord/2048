@@ -4,20 +4,22 @@ import { Mover } from "./mover";
 import { Merger } from "./merger";
 
 export type ActionType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
+export type ScoreType = number;
 
 export type HandleMoveReturnType = { board: Board; hasEnded: boolean };
 
 export class Game {
-  static defaultScore = 0;
+  static defaultScore: ScoreType = 0;
 
   static isProperAction(value: string): value is ActionType {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
-  static initialize(): Board {
+  static initialize(): { board: Board; score: ScoreType } {
     const board = new Board();
     board.spawnRandomTile();
-    return board;
+
+    return { board, score: Game.defaultScore };
   }
 
   static handleMove(board: Board, action: string): HandleMoveReturnType {
@@ -69,7 +71,7 @@ export class Game {
     return board;
   }
 
-  private static hasGameEnded(board: Board): boolean {
+  static hasGameEnded(board: Board): boolean {
     let numberOfPossibleActions = 0;
 
     const columns = board.getColumns();
