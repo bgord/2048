@@ -1,6 +1,6 @@
 import { expect, describe, it } from "vitest";
 
-import { Game } from "./game";
+import { Game, Actions } from "./game";
 import { Board } from "./board";
 import { Tile } from "./tile";
 
@@ -14,7 +14,7 @@ describe("game", () => {
 
   it("should handle a first move", () => {
     const { board } = Game.initialize();
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -31,7 +31,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -50,7 +50,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -70,7 +70,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -89,7 +89,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -108,7 +108,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -129,7 +129,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -149,7 +149,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -170,7 +170,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -191,7 +191,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -212,7 +212,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 8),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -233,7 +233,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowUp");
+    const after = Game._performAction(board, Actions.ArrowUp);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -254,7 +254,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -273,7 +273,7 @@ describe("game", () => {
       new Tile(13, 2), new Tile(14, 2), new Tile(15, 2), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -293,7 +293,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -312,7 +312,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -331,7 +331,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -352,7 +352,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -372,7 +372,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -393,7 +393,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -414,7 +414,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -435,7 +435,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 8),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -456,7 +456,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowLeft");
+    const after = Game._performAction(board, Actions.ArrowLeft);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -477,7 +477,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -496,7 +496,7 @@ describe("game", () => {
       new Tile(13), new Tile(14, 2), new Tile(15, 2), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -516,7 +516,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -535,7 +535,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -554,7 +554,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -575,7 +575,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -596,7 +596,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -617,7 +617,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -638,7 +638,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -659,7 +659,7 @@ describe("game", () => {
       new Tile(13, 8), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -680,7 +680,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowRight");
+    const after = Game._performAction(board, Actions.ArrowRight);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -701,7 +701,7 @@ describe("game", () => {
       new Tile(13, 2), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -720,7 +720,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -740,7 +740,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -759,7 +759,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -778,7 +778,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -799,7 +799,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -819,7 +819,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -840,7 +840,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -861,7 +861,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -882,7 +882,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -903,7 +903,7 @@ describe("game", () => {
       new Tile(13), new Tile(14), new Tile(15), new Tile(16, 4),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 
@@ -925,7 +925,7 @@ describe("game", () => {
       new Tile(13, 16), new Tile(14, 32), new Tile(15, 1024), new Tile(16, 512),
     ]);
 
-    const after = Game._performAction(board, "ArrowDown");
+    const after = Game._performAction(board, Actions.ArrowDown);
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
 

@@ -4,12 +4,12 @@ import { h, render } from "preact";
 import { useEffect } from "preact/hooks";
 import useStatemachine, { t } from "@cassiozen/usestatemachine";
 
-import { Game } from "../game";
+import { Game, ScoreType, Actions } from "../game";
 import { Board } from "../board";
 
 function App() {
   const [state, send] = useStatemachine({
-    schema: { context: t<{ board: Board; score: number }>() },
+    schema: { context: t<{ board: Board; score: ScoreType }>() },
     context: Game.initialize(),
     initial: "idle",
     states: {
@@ -21,10 +21,10 @@ function App() {
       },
       playing: {
         on: {
-          ArrowUp: "playing",
-          ArrowRight: "playing",
-          ArrowDown: "playing",
-          ArrowLeft: "playing",
+          [Actions.ArrowUp]: "playing",
+          [Actions.ArrowRight]: "playing",
+          [Actions.ArrowDown]: "playing",
+          [Actions.ArrowLeft]: "playing",
           FINISH: "finished",
           RESET: "idle",
         },
@@ -36,10 +36,7 @@ function App() {
               return send("FINISH");
             }
 
-            setContext(() => ({
-              board: game.board,
-              score: Game.getScore(game.board),
-            }));
+            setContext(() => game);
           }
         },
       },
@@ -122,7 +119,7 @@ function App() {
               type="button"
               class="c-button"
               data-variant="bare"
-              onClick={() => send("ArrowUp")}
+              onClick={() => send(Actions.ArrowUp)}
             >
               Up
             </button>
@@ -132,7 +129,7 @@ function App() {
                 class="c-button"
                 data-variant="bare"
                 data-mx="24"
-                onClick={() => send("ArrowLeft")}
+                onClick={() => send(Actions.ArrowLeft)}
               >
                 Left
               </button>
@@ -141,7 +138,7 @@ function App() {
                 class="c-button"
                 data-variant="bare"
                 data-mx="24"
-                onClick={() => send("ArrowDown")}
+                onClick={() => send(Actions.ArrowDown)}
               >
                 Down
               </button>
@@ -150,7 +147,7 @@ function App() {
                 class="c-button"
                 data-variant="bare"
                 data-mx="24"
-                onClick={() => send("ArrowRight")}
+                onClick={() => send(Actions.ArrowRight)}
               >
                 Right
               </button>

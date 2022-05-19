@@ -3,15 +3,25 @@ import { Board } from "./board";
 import { Mover } from "./mover";
 import { Merger } from "./merger";
 
-export type ActionType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
 export type ScoreType = number;
 
-export type HandleMoveReturnType = { board: Board; hasEnded: boolean };
+export type HandleMoveReturnType = {
+  board: Board;
+  hasEnded: boolean;
+  score: ScoreType;
+};
+
+export enum Actions {
+  ArrowUp = "ArrowUp",
+  ArrowRight = "ArrowRight",
+  ArrowDown = "ArrowDown",
+  ArrowLeft = "ArrowLeft",
+}
 
 export class Game {
   static defaultScore: ScoreType = 0;
 
-  static isProperAction(value: string): value is ActionType {
+  static isProperAction(value: string): value is Actions {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
@@ -24,13 +34,21 @@ export class Game {
 
   static handleMove(board: Board, action: string): HandleMoveReturnType {
     if (!Game.isProperAction(action)) {
-      return { board, hasEnded: Game.hasGameEnded(board) };
+      return {
+        board,
+        hasEnded: Game.hasGameEnded(board),
+        score: Game.getScore(board),
+      };
     }
 
     Game._performAction(board, action);
     board.spawnRandomTile();
 
-    return { board, hasEnded: Game.hasGameEnded(board) };
+    return {
+      board,
+      hasEnded: Game.hasGameEnded(board),
+      score: Game.getScore(board),
+    };
   }
 
   static getScore(board: Board) {
@@ -45,7 +63,7 @@ export class Game {
     return score;
   }
 
-  static _performAction(board: Board, action: ActionType): Board {
+  static _performAction(board: Board, action: Actions): Board {
     if (!Game.isProperAction(action)) return board;
 
     if (action === "ArrowUp") {
