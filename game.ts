@@ -27,6 +27,22 @@ export class Game {
     return board;
   }
 
+  static hasGameEnded(board: Board): boolean {
+    return board.isFull();
+  }
+
+  static getScore(board: Board) {
+    let score = Game.defaultScore;
+
+    for (const tile of board.state) {
+      if (tile?.value && tile.value > score) {
+        score = tile.value;
+      }
+    }
+
+    return score;
+  }
+
   static _performAction(board: Board, action: ActionType): Board {
     if (!Game.isProperAction(action)) return board;
 
@@ -51,21 +67,5 @@ export class Game {
     }
 
     return board;
-  }
-
-  static hasGameEnded(board: Board): boolean {
-    return board.isFull();
-  }
-
-  static getScore(board: Board) {
-    let score = Game.defaultScore;
-
-    for (const tile of board.state) {
-      if (tile?.value && tile.value > score) {
-        score = tile.value;
-      }
-    }
-
-    return score;
   }
 }
