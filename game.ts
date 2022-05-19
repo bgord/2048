@@ -1,3 +1,5 @@
+import { maxBy } from "lodash";
+
 import { Tile } from "./tile";
 import { Board } from "./board";
 import { Mover } from "./mover";
@@ -33,7 +35,7 @@ export class Game {
   }
 
   static handleMove(board: Board, action: string): HandleMoveReturnType {
-    if (!Game.isProperAction(action)) {
+    if (!Game.isProperAction(action) || Game.hasGameEnded(board)) {
       return {
         board,
         hasEnded: Game.hasGameEnded(board),
@@ -51,16 +53,8 @@ export class Game {
     };
   }
 
-  static getScore(board: Board) {
-    let score = Game.defaultScore;
-
-    for (const tile of board.state) {
-      if (tile?.value && tile.value > score) {
-        score = tile.value;
-      }
-    }
-
-    return score;
+  static getScore(board: Board): ScoreType {
+    return maxBy(board.state, "value")?.value ?? Game.defaultScore;
   }
 
   static _performAction(board: Board, action: Actions): Board {

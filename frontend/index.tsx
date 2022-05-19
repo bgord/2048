@@ -2,13 +2,13 @@
 
 import { h, render } from "preact";
 import { useEffect } from "preact/hooks";
-import useStatemachine, { t } from "@cassiozen/usestatemachine";
+import useStateMachine, { t } from "@cassiozen/usestatemachine";
 
 import { Game, ScoreType, Actions } from "../game";
 import { Board } from "../board";
 
 function App() {
-  const [state, send] = useStatemachine({
+  const [state, send] = useStateMachine({
     schema: { context: t<{ board: Board; score: ScoreType }>() },
     context: Game.initialize(),
     initial: "idle",
