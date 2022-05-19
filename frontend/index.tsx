@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+
 import { h, render } from "preact";
 import { useEffect } from "preact/hooks";
 import useStatemachine, { t } from "@cassiozen/usestatemachine";
@@ -48,7 +50,7 @@ function App() {
     document.body.addEventListener("keydown", (event) =>
       Game.isProperAction(event.key) ? send(event.key) : undefined
     );
-  }, []);
+  }, [send]);
 
   return (
     <main
@@ -59,6 +61,7 @@ function App() {
     >
       {state.value === "idle" && (
         <button
+          type="button"
           class="c-button"
           data-variant="primary"
           onClick={() => send("START")}
@@ -82,6 +85,7 @@ function App() {
             <h3>Score: {state.context.score}</h3>
 
             <button
+              type="button"
               class="c-button"
               data-variant="secondary"
               onClick={() => send("RESET")}
@@ -96,7 +100,7 @@ function App() {
             data-bw="1"
             style={{ maxWidth: "402px" }}
           >
-            {state.context.board.state.map((tile, index) => (
+            {state.context.board.state.map((tile) => (
               <li
                 data-display="flex"
                 data-main="center"
@@ -104,7 +108,7 @@ function App() {
                 data-bg="gray-300"
                 data-bc="gray-400"
                 data-bw="1"
-                key={index}
+                key={tile.id}
                 style={{ height: "100px", width: "100px" }}
               >
                 {tile.value}
@@ -114,6 +118,7 @@ function App() {
 
           <div data-display="flex" data-direction="column" data-mt="48">
             <button
+              type="button"
               class="c-button"
               data-variant="bare"
               onClick={() => send("ArrowUp")}
@@ -122,6 +127,7 @@ function App() {
             </button>
             <div data-mx="auto">
               <button
+                type="button"
                 class="c-button"
                 data-variant="bare"
                 data-mx="24"
@@ -130,6 +136,7 @@ function App() {
                 Left
               </button>
               <button
+                type="button"
                 class="c-button"
                 data-variant="bare"
                 data-mx="24"
@@ -138,6 +145,7 @@ function App() {
                 Down
               </button>
               <button
+                type="button"
                 class="c-button"
                 data-variant="bare"
                 data-mx="24"
