@@ -10,13 +10,13 @@ import { Board } from "../board";
 function App() {
   const [state, send] = useStatemachine({
     schema: { context: t<{ board: Board; score: number }>() },
-    context: { board: Game.initializeBoard(), score: Game.defaultScore },
+    context: { board: Game.initialize(), score: Game.defaultScore },
     initial: "idle",
     states: {
       idle: {
         on: { START: "playing" },
         effect({ setContext }) {
-          const board = Game.initializeBoard();
+          const board = Game.initialize();
           setContext(() => ({ score: Game.getScore(board), board }));
         },
       },

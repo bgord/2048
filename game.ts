@@ -14,7 +14,7 @@ export class Game {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
-  static initializeBoard(): Board {
+  static initialize(): Board {
     const board = new Board();
     board.spawnRandomTile();
     return board;

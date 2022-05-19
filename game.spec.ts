@@ -6,7 +6,7 @@ import { Tile } from "./tile";
 
 describe("game", () => {
   it("should initialize board with 1 tile", () => {
-    const board = Game.initializeBoard();
+    const board = Game.initialize();
     const numberOfTilesWithValue = board.state.filter(Tile.hasValue).length;
 
     expect(numberOfTilesWithValue).to.eq(1);
@@ -14,7 +14,7 @@ describe("game", () => {
   });
 
   it("should handle a first move", () => {
-    const board = Game.initializeBoard();
+    const board = Game.initialize();
     const after = Game._performAction(board, "ArrowUp");
 
     const numberOfTilesWithValue = after.state.filter(Tile.hasValue).length;
