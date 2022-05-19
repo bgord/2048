@@ -28,27 +28,6 @@ export class Board {
     this.state = state;
   }
 
-  static getEmpty(): BoardStateType {
-    return [
-      new Tile(1),
-      new Tile(2),
-      new Tile(3),
-      new Tile(4),
-      new Tile(5),
-      new Tile(6),
-      new Tile(7),
-      new Tile(8),
-      new Tile(9),
-      new Tile(10),
-      new Tile(11),
-      new Tile(12),
-      new Tile(13),
-      new Tile(14),
-      new Tile(15),
-      new Tile(16),
-    ];
-  }
-
   spawnRandomTile(): Board {
     const randomEmptyTileId = this.getRandomEmptyTileId();
 
@@ -59,15 +38,6 @@ export class Board {
     }
 
     return this;
-  }
-
-  private getRandomEmptyTileId(): Tile["id"] | null {
-    const emptyTiles = this.state.filter(Tile.isEmpty);
-
-    if (emptyTiles.length === 0) return null;
-
-    const randomEmptyTileIndex = random(emptyTiles.length - 1);
-    return emptyTiles[randomEmptyTileIndex].id;
   }
 
   getColumns() {
@@ -110,5 +80,35 @@ export class Board {
     }
 
     return rows;
+  }
+
+  static getEmpty(): BoardStateType {
+    return [
+      new Tile(1),
+      new Tile(2),
+      new Tile(3),
+      new Tile(4),
+      new Tile(5),
+      new Tile(6),
+      new Tile(7),
+      new Tile(8),
+      new Tile(9),
+      new Tile(10),
+      new Tile(11),
+      new Tile(12),
+      new Tile(13),
+      new Tile(14),
+      new Tile(15),
+      new Tile(16),
+    ];
+  }
+
+  private getRandomEmptyTileId(): Tile["id"] | null {
+    const emptyTiles = this.state.filter(Tile.isEmpty);
+
+    if (emptyTiles.length === 0) return null;
+
+    const randomEmptyTileIndex = random(emptyTiles.length - 1);
+    return emptyTiles[randomEmptyTileIndex].id;
   }
 }
