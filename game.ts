@@ -1,16 +1,14 @@
-import { random } from "lodash";
-
 import { Tile } from "./tile";
 import { Board } from "./board";
 import { Mover } from "./mover";
 import { Merger } from "./merger";
 
-export type MoveType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
+export type ActionType = "ArrowUp" | "ArrowRight" | "ArrowDown" | "ArrowLeft";
 
 export class Game {
   static defaultScore = 0;
 
-  static isProperMove(value: string): value is MoveType {
+  static isProperAction(value: string): value is ActionType {
     return ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowLeft"].includes(value);
   }
 
@@ -20,25 +18,34 @@ export class Game {
     return board;
   }
 
-  static handleMove(board: Board, type: string): Board {
-    if (!Game.isProperMove(type)) return board;
+  static handleMove(board: Board, action: string): Board {
+    if (!Game.isProperAction(action)) return board;
 
-    if (type === "ArrowUp") {
+    Game._performAction(board, action);
+    board.spawnRandomTile();
+
+    return board;
+  }
+
+  static _performAction(board: Board, action: ActionType): Board {
+    if (!Game.isProperAction(action)) return board;
+
+    if (action === "ArrowUp") {
       board.getColumns().forEach((column) => Merger.handle(column));
       board.getColumns().forEach((column) => Mover.handle(column));
     }
 
-    if (type === "ArrowRight") {
+    if (action === "ArrowRight") {
       board.getRows().forEach((column) => Merger.handle(column.reverse()));
       board.getRows().forEach((column) => Mover.handle(column.reverse()));
     }
 
-    if (type === "ArrowDown") {
+    if (action === "ArrowDown") {
       board.getColumns().forEach((row) => Merger.handle(row.reverse()));
       board.getColumns().forEach((row) => Mover.handle(row.reverse()));
     }
 
-    if (type === "ArrowLeft") {
+    if (action === "ArrowLeft") {
       board.getRows().forEach((row) => Merger.handle(row));
       board.getRows().forEach((row) => Mover.handle(row));
     }

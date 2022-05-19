@@ -29,15 +29,12 @@ function App() {
         },
         effect({ context, event, setContext, send }) {
           if (event.type.startsWith("Arrow")) {
-            const boardAfterMove = Game.handleMove(context.board, event.type);
-            boardAfterMove.spawnRandomTile();
-
-            if (Game.hasGameEnded(boardAfterMove)) {
-              return send("FINISH");
-            }
+            // if (Game.hasGameEnded(boardAfterMove)) {
+            //   return send("FINISH");
+            // }
 
             setContext((context) => ({
-              board: boardAfterMove,
+              board: Game.handleMove(context.board, event.type),
               score: Game.getScore(context.board),
             }));
           }
@@ -49,7 +46,7 @@ function App() {
 
   useEffect(() => {
     document.body.addEventListener("keydown", (event) =>
-      Game.isProperMove(event.key) ? send(event.key) : undefined
+      Game.isProperAction(event.key) ? send(event.key) : undefined
     );
   }, []);
 
