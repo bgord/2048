@@ -31,14 +31,13 @@ function App() {
         },
         effect({ context, event, setContext, send }) {
           if (event.type.startsWith("Arrow")) {
-            // if (Game.hasGameEnded(boardAfterMove)) {
-            //   return send("FINISH");
-            // }
+            const board = Game.handleMove(context.board, event.type);
 
-            setContext((context) => ({
-              board: Game.handleMove(context.board, event.type),
-              score: Game.getScore(context.board),
-            }));
+            if (Game.hasGameEnded(board)) {
+              return send("FINISH");
+            }
+
+            setContext((context) => ({ board, score: Game.getScore(board) }));
           }
         },
       },
@@ -70,7 +69,7 @@ function App() {
         </button>
       )}
 
-      {state.value === "playing" && (
+      {(state.value === "playing" || state.value === "finished") && (
         <div data-display="flex" data-direction="column">
           <h2 data-mx="auto" data-mb="48">
             The game of 2048
@@ -157,6 +156,8 @@ function App() {
           </div>
         </div>
       )}
+
+      {state.value === "finished" && <div>FINISHED</div>}
     </main>
   );
 }
