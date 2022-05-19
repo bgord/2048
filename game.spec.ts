@@ -25,10 +25,10 @@ describe("game", () => {
   it("should handle ArrowUp basic scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5, 2), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4, 2), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -44,10 +44,10 @@ describe("game", () => {
   it("should handle ArrowUp 3 in a column scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 2),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -64,10 +64,10 @@ describe("game", () => {
   it("should handle ArrowUp distant scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 2),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -83,10 +83,10 @@ describe("game", () => {
   it("should handle ArrowUp distant scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -102,10 +102,10 @@ describe("game", () => {
   it("should handle ArrowUp double merging", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 2),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -123,10 +123,10 @@ describe("game", () => {
   it("should handle ArrowUp non-moveable scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 4),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 4),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 2),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -143,10 +143,10 @@ describe("game", () => {
   it("should handle ArrowUp non-moveable scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 8),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 8),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -164,10 +164,10 @@ describe("game", () => {
   it("should handle ArrowUp non-moveable scenario 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 8),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 8),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -185,10 +185,10 @@ describe("game", () => {
   it("should handle ArrowUp movement alone 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 8),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 8),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -206,10 +206,10 @@ describe("game", () => {
   it("should handle ArrowUp movement alone 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 8),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 8),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -227,10 +227,10 @@ describe("game", () => {
   it("should handle ArrowUp movement alone 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 4),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowUp);
@@ -248,10 +248,10 @@ describe("game", () => {
   it("should handle ArrowLeft basic scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2, 2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1, 2), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -267,10 +267,10 @@ describe("game", () => {
   it("should handle ArrowLeft 3 in a column scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13, 2), new Tile(14, 2), new Tile(15, 2), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12, 2), new Tile(13, 2), new Tile(14, 2), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -287,10 +287,10 @@ describe("game", () => {
   it("should handle ArrowLeft distant scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2), new Tile(3, 2), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1), new Tile(2, 2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -306,10 +306,10 @@ describe("game", () => {
   it("should handle ArrowLeft distant scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -325,10 +325,10 @@ describe("game", () => {
   it("should handle ArrowLeft double merging", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5, 2), new Tile(6, 2), new Tile(7, 2), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4, 2), new Tile(5, 2), new Tile(6, 2), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -346,10 +346,10 @@ describe("game", () => {
   it("should handle ArrowLeft non-moveable scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2, 4), new Tile(3, 2), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1, 4), new Tile(2, 2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -366,10 +366,10 @@ describe("game", () => {
   it("should handle ArrowLeft non-moveable scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2), new Tile(3, 8), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1), new Tile(2, 8), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -387,10 +387,10 @@ describe("game", () => {
   it("should handle ArrowLeft non-moveable scenario 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2, 2), new Tile(3, 8), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1, 2), new Tile(2, 8), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -408,10 +408,10 @@ describe("game", () => {
   it("should handle ArrowLeft movement alone 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11, 8), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10, 8), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -429,10 +429,10 @@ describe("game", () => {
   it("should handle ArrowLeft movement alone 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 8),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 8),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -450,10 +450,10 @@ describe("game", () => {
   it("should handle ArrowLeft movement alone 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 4), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 4), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowLeft);
@@ -471,10 +471,10 @@ describe("game", () => {
   it("should handle ArrowRight basic scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3, 2), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2, 2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -490,10 +490,10 @@ describe("game", () => {
   it("should handle ArrowRight 3 in a column scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14, 2), new Tile(15, 2), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13, 2), new Tile(14, 2), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -510,10 +510,10 @@ describe("game", () => {
   it("should handle ArrowRight distant scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2, 2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1, 2), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -529,10 +529,10 @@ describe("game", () => {
   it("should handle ArrowRight distant scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -548,10 +548,10 @@ describe("game", () => {
   it("should handle ArrowRight double merging", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5, 2), new Tile(6, 2), new Tile(7, 2), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4, 2), new Tile(5, 2), new Tile(6, 2), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -569,10 +569,10 @@ describe("game", () => {
   it("should handle ArrowRight non-moveable scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2, 2), new Tile(3, 4), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1, 2), new Tile(2, 4), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -590,10 +590,10 @@ describe("game", () => {
   it("should handle ArrowRight non-moveable scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2, 8), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1, 8), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -611,10 +611,10 @@ describe("game", () => {
   it("should handle ArrowRight non-moveable scenario 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2, 8), new Tile(3, 2), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1, 8), new Tile(2, 2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -632,10 +632,10 @@ describe("game", () => {
   it("should handle ArrowRight movement alone 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10, 8), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9, 8), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -653,10 +653,10 @@ describe("game", () => {
   it("should handle ArrowRight movement alone 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13, 8), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12, 8), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -674,10 +674,10 @@ describe("game", () => {
   it("should handle ArrowRight movement alone 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2), new Tile(3), new Tile(4, 4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0, 2), new Tile(1), new Tile(2), new Tile(3, 4),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowRight);
@@ -695,10 +695,10 @@ describe("game", () => {
   it("should handle ArrowDown basic scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9, 2), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13, 2), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8, 2), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12, 2), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -714,10 +714,10 @@ describe("game", () => {
   it("should handle ArrowDown 3 in a column scenario", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 2),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -734,10 +734,10 @@ describe("game", () => {
   it("should handle ArrowDown distant scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -753,10 +753,10 @@ describe("game", () => {
   it("should handle ArrowDown distant scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -772,10 +772,10 @@ describe("game", () => {
   it("should handle ArrowDown double merging", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 2),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -793,10 +793,10 @@ describe("game", () => {
   it("should handle ArrowDown non-moveable scenario 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 2),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 4),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 2),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 4),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -813,10 +813,10 @@ describe("game", () => {
   it("should handle ArrowDown non-moveable scenario 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 2),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 8),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 2),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -834,10 +834,10 @@ describe("game", () => {
   it("should handle ArrowDown non-moveable scenario 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12, 2),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 8),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11, 2),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -855,10 +855,10 @@ describe("game", () => {
   it("should handle ArrowDown movement alone 1", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8, 8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7, 8),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -876,10 +876,10 @@ describe("game", () => {
   it("should handle ArrowDown movement alone 2", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 8),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 8),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -897,10 +897,10 @@ describe("game", () => {
   it("should handle ArrowDown movement alone 3", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1), new Tile(2), new Tile(3), new Tile(4, 2),
-      new Tile(5), new Tile(6), new Tile(7), new Tile(8),
-      new Tile(9), new Tile(10), new Tile(11), new Tile(12),
-      new Tile(13), new Tile(14), new Tile(15), new Tile(16, 4),
+      new Tile(0), new Tile(1), new Tile(2), new Tile(3, 2),
+      new Tile(4), new Tile(5), new Tile(6), new Tile(7),
+      new Tile(8), new Tile(9), new Tile(10), new Tile(11),
+      new Tile(12), new Tile(13), new Tile(14), new Tile(15, 4),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
@@ -919,10 +919,10 @@ describe("game", () => {
   it("should finish the game", () => {
     // prettier-ignore
     const board = new Board([
-      new Tile(1, 2), new Tile(2, 8), new Tile(3, 4), new Tile(4, 2),
-      new Tile(5, 4), new Tile(6, 2), new Tile(7, 8), new Tile(8, 4),
-      new Tile(9, 2), new Tile(10, 8), new Tile(11, 32), new Tile(12, 128),
-      new Tile(13, 16), new Tile(14, 32), new Tile(15, 1024), new Tile(16, 512),
+      new Tile(0, 2), new Tile(1, 8), new Tile(2, 4), new Tile(3, 2),
+      new Tile(4, 4), new Tile(5, 2), new Tile(6, 8), new Tile(7, 4),
+      new Tile(8, 2), new Tile(9, 8), new Tile(10, 32), new Tile(11, 128),
+      new Tile(12, 16), new Tile(13, 32), new Tile(14, 1024), new Tile(15, 512),
     ]);
 
     const after = Game._performAction(board, Actions.ArrowDown);
