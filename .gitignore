@@ -1,6 +1,7 @@
+!static/*.ico
+!static/*.png
+!static/*.svg
 .eslintcache
+build/
 node_modules/
 static/*
-!static/*.png
-!static/*.ico
-!static/*.svg
