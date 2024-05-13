@@ -1,11 +1,13 @@
 # Changelog
+- 2024-05-13 19:56 4147191 **fix: variable for PLAYWRIGHT_VERSION**
+## 2024-05-13 19:56 
 - 2024-05-13 19:45 cbf12f0 **step: cache playwright binaries**
-## 2024-05-13 19:45 
 - 2024-05-13 19:35 941a8d4 **step: bump bgord/scripts**
 - 2024-05-13 19:24 86856e9 **refactor: update packages**
 - 2024-05-13 19:22 3d00eb3 **refactor: update scrpts**
 - 2024-05-13 19:22 3b72df4 **refactor: update workflows**
 - 2024-05-13 19:22 1f02a17 **step: bump bgord/scripts**
+- 2024-05-13 17:45 78f5a9a **docs: generate CHANGELOG**
 - 2024-05-13 17:37 e90ee17 **docs: generate CHANGELOG**
 - 2023-10-01 20:42 fd0ac02 **refactor: node 20**
 - 2023-02-20 22:31 064fb2b **step: bump bgord/scripts**
