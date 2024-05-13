@@ -22,19 +22,23 @@ info "Cleaned previous build cache"
 
 # ==========================================================
 
-./bgord-scripts/frontend:build.sh
+cp node_modules/@bgord/design/dist/main.min.css static/
+cp node_modules/@bgord/design/dist/normalize.min.css static/
+info "Copied CSS"
+
+# ==========================================================
+
+./bgord-scripts/css-purge.sh
+
+# ==========================================================
+
+./bgord-scripts/frontend-build.sh
 info "Frontend built"
 
 # ==========================================================
 
 cp index.html $OUT_DIR
 info "Copied index.html"
-
-# ==========================================================
-
-cp node_modules/@bgord/design/dist/main.min.css $OUT_DIR/
-cp node_modules/@bgord/design/dist/normalize.min.css $OUT_DIR/
-info "Copied CSS"
 
 # ==========================================================
 
