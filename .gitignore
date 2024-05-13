@@ -5,3 +5,5 @@
 build/
 node_modules/
 static/*
+test-results/
+tsconfig.tsbuildinfo

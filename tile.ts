@@ -20,7 +20,7 @@ export class Tile {
   double() {
     if (this.value === null) return;
 
-    this.value = this.value * 2;
+    this.value *= 2;
   }
 
   clear() {

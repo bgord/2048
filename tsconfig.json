@@ -4,7 +4,15 @@
     "esModuleInterop": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment"
+    "jsxFragmentFactory": "Fragment",
+    "noUncheckedIndexedAccess": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "lib": ["ESNext"],
+    "incremental": true,
+    "experimentalDecorators": true
   },
   "exclude": ["bgord-scripts"]
 }

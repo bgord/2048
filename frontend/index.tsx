@@ -15,6 +15,7 @@ function App() {
     states: {
       idle: {
         on: { START: "playing" },
+        // @ts-ignore
         effect({ setContext }) {
           setContext(Game.initialize);
         },
@@ -28,6 +29,7 @@ function App() {
           FINISH: "finished",
           RESET: "idle",
         },
+        // @ts-ignore
         effect({ context, event, setContext, send }) {
           if (event.type.startsWith("Arrow")) {
             const game = Game.handleMove(context.board, event.type);
@@ -53,10 +55,14 @@ function App() {
   return (
     <main
       data-display="flex"
+      data-direction="column"
       data-main="center"
       data-cross="center"
       data-pt="72"
     >
+      <h1 data-display="flex" data-p="12" data-mb="24">
+        2048
+      </h1>
       {state.value === "idle" && (
         <button
           type="button"
@@ -70,10 +76,6 @@ function App() {
 
       {(state.value === "playing" || state.value === "finished") && (
         <div data-display="flex" data-direction="column">
-          <h2 data-mx="auto" data-mb="48">
-            The game of 2048
-          </h2>
-
           <div
             data-display="flex"
             data-cross="center"

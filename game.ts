@@ -1,6 +1,5 @@
 import { maxBy } from "lodash";
 
-import { Tile } from "./tile";
 import { Board } from "./board";
 import { Mover } from "./mover";
 import { Merger } from "./merger";
