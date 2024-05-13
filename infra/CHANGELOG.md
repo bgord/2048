@@ -1,0 +1,57 @@
+# Changelog
+- 2024-05-13 19:35 941a8d4 **step: bump bgord/scripts**
+## 2024-05-13 19:35 
+- 2024-05-13 19:24 86856e9 **refactor: update packages**
+- 2024-05-13 19:22 3d00eb3 **refactor: update scrpts**
+- 2024-05-13 19:22 3b72df4 **refactor: update workflows**
+- 2024-05-13 19:22 1f02a17 **step: bump bgord/scripts**
+- 2023-10-01 20:42 fd0ac02 **refactor: node 20**
+- 2023-02-20 22:31 064fb2b **step: bump bgord/scripts**
+- 2023-01-17 00:12 89cd901 **step: bump package-lock.json**
+- 2022-07-02 08:58 de7335d **fix: css paths in html**
+- 2022-07-02 08:54 c4f1b29 **step: add gh deploy workflow**
+- 2022-07-02 08:53 f3d80d4 **step: re-add scripts**
+- 2022-07-02 08:52 a16cef8 **step: remove scripts**
+- 2022-07-02 08:47 fde78ea **feature: add staging project build script**
+- 2022-05-19 21:58 44f88b1 **refactor: use _.maxBy for getScore**
+- 2022-05-19 21:54 b6418f5 **refactor: autogenerate empty board**
+- 2022-05-19 21:34 cb372d2 **refactor: define actions enum**
+- 2022-05-19 21:23 8cab5d9 **refactor: return score from initialize**
+- 2022-05-19 21:18 c1bac2d **refactor: initializeBoard -> initialize**
+- 2022-05-19 21:10 5c5a687 **refactor: return has ended from handleMove**
+- 2022-05-19 20:59 f9e1aa7 **feature: add finished screen**
+- 2022-05-19 20:49 e64019b **step: add hasGameEnded**
+- 2022-05-19 20:47 d886326 **step: add merger/mover simulate methods**
+- 2022-05-19 20:12 1a9f2a4 **refactor: restructure game methods**
+- 2022-05-19 20:08 a37bb3b **step: add board#isFull**
+- 2022-05-19 15:12 09bb5bc **refactor: reorganize board methods**
+- 2022-05-19 14:45 e22f3bf **fix: eslint errors and warnings**
+- 2022-05-19 14:43 8bdb7ce **refactor: encapsulate spawning random tile after performing an action**
+- 2022-05-19 14:36 7d5d0db **refactor: improve mover/merger structure**
+- 2022-05-19 14:30 ff5b9b1 **refactor: add newly spaned static value to tile**
+- 2022-05-19 14:25 003d4e0 **refactor: improve formatting**
+- 2022-05-19 14:24 0eac41c **refactor: move isProperMove call to handleMove**
+- 2022-05-18 19:15 93f562b **step: arrow{right,down}**
+- 2022-05-18 18:59 88939b7 **refactor: extract mover and merger**
+- 2022-05-18 18:48 dea7f1c **feature: handle the rest of moves**
+- 2022-05-18 18:42 87c6887 **refactor: extract moves and merges**
+- 2022-05-18 18:33 36fdefa **step: add arrow left movement**
+- 2022-05-18 18:11 3b17022 **feature: handle arrow up move**
+- 2022-05-18 16:35 bf6ae63 **refactor: use new hierarchy on the frontend**
+- 2022-05-18 16:24 05e44ae **step: add basic tests**
+- 2022-05-18 16:11 2c551bc **refactor: add board class**
+- 2022-05-18 15:56 2de5b96 **refactor: extract tile class**
+- 2022-05-18 15:35 1d86e3a **refactor: move game to a separate file**
+- 2022-05-18 15:29 e53b388 **step: install vitest**
+- 2022-05-18 15:05 ec7a8f7 **step: add board#getcolumns**
+- 2022-05-16 23:02 ef50bfd **refactor: add spawnRandomTile method**
+- 2022-05-16 22:56 9fd2781 **feature: check if game has ended**
+- 2022-05-16 22:17 8e81aec **feature: add reset button**
+- 2022-05-16 22:14 3df574b **fix: clone empty board**
+- 2022-05-13 17:47 19298eb **feature: calculate score**
+- 2022-05-13 17:45 f45ef7c **feature: implement board initialization**
+- 2022-05-13 17:31 3e4a248 **step: add use game controls hook**
+- 2022-05-13 17:22 a659cec **feature: add a way to play with buttons**
+- 2022-05-13 17:15 ad68565 **feature: render board**
+- 2022-05-13 16:44 f58e87e **step: install use state machine hook**
+- 2022-05-13 16:32 fccc412 **step: setup project**
