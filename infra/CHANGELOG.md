@@ -1,12 +1,15 @@
 # Changelog
+- 2024-05-15 08:49 8dd2230 **Merge pull request #1 from bgord/dependabot/npm_and_yarn/knip-5.16.0**
+## 2024-05-15 08:49 
+- 2024-05-15 01:03 81e6087 **build(deps-dev): bump knip from 5.15.1 to 5.16.0**
 - 2024-05-13 19:56 4147191 **fix: variable for PLAYWRIGHT_VERSION**
-## 2024-05-13 19:56 
 - 2024-05-13 19:45 cbf12f0 **step: cache playwright binaries**
 - 2024-05-13 19:35 941a8d4 **step: bump bgord/scripts**
 - 2024-05-13 19:24 86856e9 **refactor: update packages**
 - 2024-05-13 19:22 3d00eb3 **refactor: update scrpts**
 - 2024-05-13 19:22 3b72df4 **refactor: update workflows**
 - 2024-05-13 19:22 1f02a17 **step: bump bgord/scripts**
+- 2024-05-13 17:57 4ebe50d **docs: generate CHANGELOG**
 - 2024-05-13 17:45 78f5a9a **docs: generate CHANGELOG**
 - 2024-05-13 17:37 e90ee17 **docs: generate CHANGELOG**
 - 2023-10-01 20:42 fd0ac02 **refactor: node 20**
