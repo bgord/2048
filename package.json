@@ -26,7 +26,9 @@
     "postcss-cli": "11.0.0",
     "serve": "14.2.3",
     "standard-version": "9.5.0",
-    "vitest": "1.6.0"
+    "vitest": "1.6.0",
+    "cspell": "8.8.1",
+    "shellcheck": "2.2.0"
   },
   "dependencies": {
     "@bgord/design": "0.27.82",
