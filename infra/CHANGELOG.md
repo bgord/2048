@@ -1,8 +1,10 @@
 # Changelog
+- 2024-05-18 13:59 92c38f6 **step: install linters**
+## 2024-05-18 13:59 
 - 2024-05-17 18:36 258b8cf **Merge pull request #2 from bgord/dependabot/npm_and_yarn/esbuild-0.21.3**
-## 2024-05-17 18:36 
 - 2024-05-17 18:35 2375085 **Merge pull request #3 from bgord/dependabot/npm_and_yarn/preact-10.22.0**
 - 2024-05-17 18:34 7817678 **Merge pull request #4 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.3**
+- 2024-05-17 16:36 dd50006 **docs: generate CHANGELOG**
 - 2024-05-17 16:36 0526712 **build(deps-dev): bump esbuild from 0.21.2 to 0.21.3**
 - 2024-05-17 16:35 d904125 **docs: generate CHANGELOG**
 - 2024-05-17 16:35 0f7f2d6 **docs: generate CHANGELOG**
