@@ -1,6 +1,9 @@
 # Changelog
+- 2024-05-22 12:23 2486f52 **Merge pull request #5 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.4**
+## 2024-05-22 12:23 
+- 2024-05-20 01:11 623c32c **build(deps-dev): bump @types/lodash from 4.17.3 to 4.17.4**
 - 2024-05-18 13:59 92c38f6 **step: install linters**
-## 2024-05-18 13:59 
+- 2024-05-18 12:00 2717ca1 **docs: generate CHANGELOG**
 - 2024-05-17 18:36 258b8cf **Merge pull request #2 from bgord/dependabot/npm_and_yarn/esbuild-0.21.3**
 - 2024-05-17 18:35 2375085 **Merge pull request #3 from bgord/dependabot/npm_and_yarn/preact-10.22.0**
 - 2024-05-17 18:34 7817678 **Merge pull request #4 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.3**
