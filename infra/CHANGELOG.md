@@ -1,7 +1,10 @@
 # Changelog
+- 2024-05-27 09:29 a1c7167 **Merge pull request #7 from bgord/dependabot/npm_and_yarn/cspell-8.8.3**
+## 2024-05-27 09:29 
 - 2024-05-27 09:28 9e893a4 **Merge pull request #9 from bgord/dependabot/npm_and_yarn/esbuild-0.21.4**
 - 2024-05-27 09:28 7007dda **Merge pull request #8 from bgord/dependabot/npm_and_yarn/playwright/test-1.44.1**
-## 2024-05-27 09:28 
+- 2024-05-27 07:29 7b57dd8 **build(deps-dev): bump cspell from 8.8.1 to 8.8.3**
+- 2024-05-27 07:28 7012e05 **docs: generate CHANGELOG**
 - 2024-05-27 00:56 f5cea4f **build(deps-dev): bump esbuild from 0.21.3 to 0.21.4**
 - 2024-05-24 00:27 48f2769 **build(deps-dev): bump @playwright/test from 1.44.0 to 1.44.1**
 - 2024-05-22 12:23 2486f52 **Merge pull request #5 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.4**
