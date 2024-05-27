@@ -1,6 +1,11 @@
 # Changelog
+- 2024-05-27 09:28 9e893a4 **Merge pull request #9 from bgord/dependabot/npm_and_yarn/esbuild-0.21.4**
+- 2024-05-27 09:28 7007dda **Merge pull request #8 from bgord/dependabot/npm_and_yarn/playwright/test-1.44.1**
+## 2024-05-27 09:28 
+- 2024-05-27 00:56 f5cea4f **build(deps-dev): bump esbuild from 0.21.3 to 0.21.4**
+- 2024-05-24 00:27 48f2769 **build(deps-dev): bump @playwright/test from 1.44.0 to 1.44.1**
 - 2024-05-22 12:23 2486f52 **Merge pull request #5 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.4**
-## 2024-05-22 12:23 
+- 2024-05-22 10:23 ba680cf **docs: generate CHANGELOG**
 - 2024-05-20 01:11 623c32c **build(deps-dev): bump @types/lodash from 4.17.3 to 4.17.4**
 - 2024-05-18 13:59 92c38f6 **step: install linters**
 - 2024-05-18 12:00 2717ca1 **docs: generate CHANGELOG**
