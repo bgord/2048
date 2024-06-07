@@ -1,7 +1,10 @@
 # Changelog
+- 2024-06-07 16:25 afa589a **Merge pull request #14 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.0**
+## 2024-06-07 16:25 
+- 2024-06-05 00:34 5d1060f **build(deps-dev): bump @biomejs/biome from 1.7.3 to 1.8.0**
 - 2024-06-04 21:45 b546cf0 **Merge pull request #13 from bgord/dependabot/npm_and_yarn/knip-5.17.4**
 - 2024-06-04 21:45 5d9a818 **Merge pull request #12 from bgord/dependabot/npm_and_yarn/cspell-8.8.4**
-## 2024-06-04 21:45 
+- 2024-06-04 19:45 034bf09 **docs: generate CHANGELOG**
 - 2024-06-04 01:07 9123a3a **build(deps-dev): bump knip from 5.17.3 to 5.17.4**
 - 2024-06-04 01:07 4896bcd **build(deps-dev): bump cspell from 8.8.3 to 8.8.4**
 - 2024-05-30 15:31 8eb4a07 **Merge pull request #11 from bgord/dependabot/npm_and_yarn/knip-5.17.3**
