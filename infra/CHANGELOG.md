@@ -1,8 +1,15 @@
 # Changelog
+- 2024-06-24 12:32 eee5805 **Merge pull request #27 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.2**
+- 2024-06-24 12:32 b78baf9 **Merge pull request #26 from bgord/dependabot/npm_and_yarn/cspell-8.9.1**
+## 2024-06-24 12:32 
+- 2024-06-24 12:31 32298e8 **Merge pull request #28 from bgord/dependabot/npm_and_yarn/knip-5.22.2**
+- 2024-06-24 00:42 8f67aa8 **build(deps-dev): bump knip from 5.17.4 to 5.22.2**
+- 2024-06-21 00:53 7512c09 **build(deps-dev): bump @biomejs/biome from 1.8.1 to 1.8.2**
+- 2024-06-21 00:53 1cdb769 **build(deps-dev): bump cspell from 8.8.4 to 8.9.1**
 - 2024-06-17 12:40 f7b5b7a **Merge pull request #15 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.5**
 - 2024-06-17 12:40 df25706 **Merge pull request #19 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.1**
 - 2024-06-17 12:40 7b752ee **Merge pull request #18 from bgord/dependabot/npm_and_yarn/shellcheck-3.0.0**
-## 2024-06-17 12:40 
+- 2024-06-17 10:40 7014ff0 **docs: generate CHANGELOG**
 - 2024-06-11 00:23 17464c3 **build(deps-dev): bump @biomejs/biome from 1.8.0 to 1.8.1**
 - 2024-06-10 01:27 183bb58 **build(deps-dev): bump shellcheck from 2.2.0 to 3.0.0**
 - 2024-06-10 01:26 a005e7d **build(deps-dev): bump @types/lodash from 4.17.4 to 4.17.5**
