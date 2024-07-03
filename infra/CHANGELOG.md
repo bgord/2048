@@ -1,9 +1,20 @@
 # Changelog
+- 2024-07-03 09:48 ffdab35 **Merge pull request #34 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.3**
+- 2024-07-03 09:48 8490d88 **Merge pull request #32 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.6**
+## 2024-07-03 09:48 
+- 2024-07-03 09:47 f6cb5d9 **Merge pull request #37 from bgord/dependabot/npm_and_yarn/postcss-8.4.39**
 - 2024-07-03 09:47 ef21a06 **Merge pull request #41 from bgord/dependabot/npm_and_yarn/cspell-8.10.0**
 - 2024-07-03 09:47 d74e0a3 **Merge pull request #42 from bgord/dependabot/npm_and_yarn/playwright/test-1.45.1**
-## 2024-07-03 09:47 
+- 2024-07-03 09:47 d2453da **Merge pull request #38 from bgord/dependabot/npm_and_yarn/knip-5.23.3**
+- 2024-07-03 09:47 a4685e6 **Merge pull request #39 from bgord/dependabot/npm_and_yarn/preact-10.22.1**
+- 2024-07-03 07:48 4038380 **build(deps-dev): bump @types/lodash from 4.17.5 to 4.17.6**
+- 2024-07-03 07:47 4a6254f **docs: generate CHANGELOG**
+- 2024-07-03 07:47 0fe4f6e **build(deps-dev): bump postcss from 8.4.38 to 8.4.39**
 - 2024-07-03 01:10 dcee6e3 **build(deps-dev): bump cspell from 8.9.1 to 8.10.0**
 - 2024-07-03 01:10 1d89ec3 **build(deps-dev): bump @playwright/test from 1.44.1 to 1.45.1**
+- 2024-07-02 00:54 e48d41c **build(deps): bump preact from 10.22.0 to 10.22.1**
+- 2024-07-02 00:54 4e328d4 **build(deps-dev): bump knip from 5.22.2 to 5.23.3**
+- 2024-06-28 00:29 fd57e5a **build(deps-dev): bump @biomejs/biome from 1.8.2 to 1.8.3**
 - 2024-06-24 12:32 eee5805 **Merge pull request #27 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.2**
 - 2024-06-24 12:32 b78baf9 **Merge pull request #26 from bgord/dependabot/npm_and_yarn/cspell-8.9.1**
 - 2024-06-24 12:31 32298e8 **Merge pull request #28 from bgord/dependabot/npm_and_yarn/knip-5.22.2**
