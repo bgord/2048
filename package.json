@@ -17,7 +17,7 @@
     "@fullhuman/postcss-purgecss": "6.0.0",
     "@playwright/test": "1.45.1",
     "@types/lodash": "4.17.6",
-    "esbuild": "0.21.4",
+    "esbuild": "0.23.0",
     "gzip-cli": "1.2.0",
     "husky": "9.0.11",
     "knip": "5.23.3",
