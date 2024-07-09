@@ -1,6 +1,8 @@
 # Changelog
+- 2024-07-09 11:10 896f279 **Merge pull request #47 from bgord/dependabot/npm_and_yarn/vitest-2.0.1**
+## 2024-07-09 11:10 
+- 2024-07-09 00:53 ba850a3 **build(deps-dev): bump vitest from 1.6.0 to 2.0.1**
 - 2024-07-03 09:49 57eebb3 **Merge pull request #40 from bgord/dependabot/npm_and_yarn/esbuild-0.23.0**
-## 2024-07-03 09:49 
 - 2024-07-03 09:48 ffdab35 **Merge pull request #34 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.3**
 - 2024-07-03 09:48 8490d88 **Merge pull request #32 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.6**
 - 2024-07-03 09:47 f6cb5d9 **Merge pull request #37 from bgord/dependabot/npm_and_yarn/postcss-8.4.39**
@@ -8,6 +10,7 @@
 - 2024-07-03 09:47 d74e0a3 **Merge pull request #42 from bgord/dependabot/npm_and_yarn/playwright/test-1.45.1**
 - 2024-07-03 09:47 d2453da **Merge pull request #38 from bgord/dependabot/npm_and_yarn/knip-5.23.3**
 - 2024-07-03 09:47 a4685e6 **Merge pull request #39 from bgord/dependabot/npm_and_yarn/preact-10.22.1**
+- 2024-07-03 07:49 f0d71e3 **docs: generate CHANGELOG**
 - 2024-07-03 07:48 968ebe4 **docs: generate CHANGELOG**
 - 2024-07-03 07:48 5a814b9 **build(deps-dev): bump esbuild from 0.21.4 to 0.23.0**
 - 2024-07-03 07:48 4038380 **build(deps-dev): bump @types/lodash from 4.17.5 to 4.17.6**
