@@ -27,7 +27,7 @@
     "serve": "14.2.3",
     "standard-version": "9.5.0",
     "vitest": "2.0.1",
-    "cspell": "8.10.0",
+    "cspell": "8.10.4",
     "shellcheck": "3.0.0"
   },
   "dependencies": {
