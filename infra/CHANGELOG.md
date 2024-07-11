@@ -1,8 +1,11 @@
 # Changelog
+- 2024-07-11 09:57 f270b3e **Merge pull request #48 from bgord/dependabot/npm_and_yarn/vitest-2.0.2**
+## 2024-07-11 09:57 
+- 2024-07-11 00:29 56d91e4 **build(deps-dev): bump vitest from 2.0.1 to 2.0.2**
 - 2024-07-09 11:12 456da41 **Merge pull request #45 from bgord/dependabot/npm_and_yarn/cspell-8.10.4**
-## 2024-07-09 11:12 
 - 2024-07-09 11:11 5ea2a54 **Merge pull request #46 from bgord/dependabot/npm_and_yarn/knip-5.25.1**
 - 2024-07-09 11:10 896f279 **Merge pull request #47 from bgord/dependabot/npm_and_yarn/vitest-2.0.1**
+- 2024-07-09 09:12 c97e7f6 **docs: generate CHANGELOG**
 - 2024-07-09 09:11 75e1158 **build(deps-dev): bump cspell from 8.10.0 to 8.10.4**
 - 2024-07-09 09:11 3b4c0ef **docs: generate CHANGELOG**
 - 2024-07-09 09:11 2d768d0 **docs: generate CHANGELOG**
