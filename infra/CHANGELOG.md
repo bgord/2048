@@ -1,6 +1,9 @@
 # Changelog
+- 2024-07-15 08:24 213cf1b **Merge pull request #50 from bgord/dependabot/npm_and_yarn/knip-5.26.0**
+## 2024-07-15 08:24 
+- 2024-07-15 00:42 7eb02d1 **build(deps-dev): bump knip from 5.25.1 to 5.26.0**
 - 2024-07-11 09:57 f270b3e **Merge pull request #48 from bgord/dependabot/npm_and_yarn/vitest-2.0.2**
-## 2024-07-11 09:57 
+- 2024-07-11 07:57 7840e90 **docs: generate CHANGELOG**
 - 2024-07-11 00:29 56d91e4 **build(deps-dev): bump vitest from 2.0.1 to 2.0.2**
 - 2024-07-09 11:12 456da41 **Merge pull request #45 from bgord/dependabot/npm_and_yarn/cspell-8.10.4**
 - 2024-07-09 11:11 5ea2a54 **Merge pull request #46 from bgord/dependabot/npm_and_yarn/knip-5.25.1**
