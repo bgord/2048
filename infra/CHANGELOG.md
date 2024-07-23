@@ -1,6 +1,9 @@
 # Changelog
+- 2024-07-23 08:10 18ee626 **Merge pull request #59 from bgord/dependabot/npm_and_yarn/vitest-2.0.4**
+## 2024-07-23 08:10 
+- 2024-07-23 00:22 b51ecf9 **build(deps-dev): bump vitest from 2.0.3 to 2.0.4**
 - 2024-07-19 09:36 472fdd6 **Merge pull request #56 from bgord/dependabot/npm_and_yarn/husky-9.1.1**
-## 2024-07-19 09:36 
+- 2024-07-19 07:36 f69a4bf **docs: generate CHANGELOG**
 - 2024-07-19 00:28 275071d **build(deps-dev): bump husky from 9.0.11 to 9.1.1**
 - 2024-07-17 09:43 32e25f8 **Merge pull request #53 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.7**
 - 2024-07-17 09:42 f10faa5 **Merge pull request #51 from bgord/dependabot/npm_and_yarn/vitest-2.0.3**
