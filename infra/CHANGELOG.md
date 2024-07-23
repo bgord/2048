@@ -1,7 +1,12 @@
 # Changelog
+- 2024-07-23 08:13 f68f493 **Merge pull request #58 from bgord/dependabot/npm_and_yarn/cspell-8.12.1**
+- 2024-07-23 08:13 a41a43e **Merge pull request #57 from bgord/dependabot/npm_and_yarn/playwright/test-1.45.3**
+## 2024-07-23 08:13 
 - 2024-07-23 08:10 18ee626 **Merge pull request #59 from bgord/dependabot/npm_and_yarn/vitest-2.0.4**
-## 2024-07-23 08:10 
+- 2024-07-23 06:11 bdbba56 **build(deps-dev): bump cspell from 8.11.0 to 8.12.1**
+- 2024-07-23 06:10 4f2f425 **docs: generate CHANGELOG**
 - 2024-07-23 00:22 b51ecf9 **build(deps-dev): bump vitest from 2.0.3 to 2.0.4**
+- 2024-07-23 00:21 baa0bc5 **build(deps-dev): bump @playwright/test from 1.45.2 to 1.45.3**
 - 2024-07-19 09:36 472fdd6 **Merge pull request #56 from bgord/dependabot/npm_and_yarn/husky-9.1.1**
 - 2024-07-19 07:36 f69a4bf **docs: generate CHANGELOG**
 - 2024-07-19 00:28 275071d **build(deps-dev): bump husky from 9.0.11 to 9.1.1**
