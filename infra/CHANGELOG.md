@@ -1,8 +1,13 @@
 # Changelog
+- 2024-07-30 13:05 8973ae4 **Merge pull request #64 from bgord/dependabot/npm_and_yarn/preact-10.23.1**
+- 2024-07-30 13:05 6838215 **Merge pull request #66 from bgord/dependabot/npm_and_yarn/husky-9.1.4**
+## 2024-07-30 13:05 
+- 2024-07-30 00:58 023ebe9 **build(deps-dev): bump husky from 9.1.1 to 9.1.4**
+- 2024-07-26 00:49 b1fd420 **build(deps): bump preact from 10.23.0 to 10.23.1**
 - 2024-07-25 08:52 4419d13 **Merge pull request #62 from bgord/dependabot/npm_and_yarn/postcss-8.4.40**
-## 2024-07-25 08:52 
 - 2024-07-25 08:51 8e8519f **Merge pull request #60 from bgord/dependabot/npm_and_yarn/knip-5.27.0**
 - 2024-07-25 08:51 37a2ffe **Merge pull request #61 from bgord/dependabot/npm_and_yarn/preact-10.23.0**
+- 2024-07-25 06:52 fe5614e **docs: generate CHANGELOG**
 - 2024-07-25 00:57 039aada **build(deps-dev): bump postcss from 8.4.39 to 8.4.40**
 - 2024-07-24 00:37 24aefe7 **build(deps-dev): bump knip from 5.26.0 to 5.27.0**
 - 2024-07-24 00:37 0ea885d **build(deps): bump preact from 10.22.1 to 10.23.0**
