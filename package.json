@@ -19,7 +19,7 @@
     "@types/lodash": "4.17.7",
     "esbuild": "0.23.0",
     "gzip-cli": "1.2.0",
-    "husky": "9.1.1",
+    "husky": "9.1.4",
     "knip": "5.27.0",
     "only-allow": "1.2.1",
     "postcss": "8.4.40",
