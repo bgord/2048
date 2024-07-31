@@ -1,7 +1,10 @@
 # Changelog
+- 2024-07-31 09:43 d45f35c **Merge pull request #67 from bgord/dependabot/npm_and_yarn/cspell-8.13.0**
+## 2024-07-31 09:43 
+- 2024-07-31 00:25 20a4e87 **build(deps-dev): bump cspell from 8.12.1 to 8.13.0**
 - 2024-07-30 13:05 8973ae4 **Merge pull request #64 from bgord/dependabot/npm_and_yarn/preact-10.23.1**
 - 2024-07-30 13:05 6838215 **Merge pull request #66 from bgord/dependabot/npm_and_yarn/husky-9.1.4**
-## 2024-07-30 13:05 
+- 2024-07-30 11:06 e174823 **docs: generate CHANGELOG**
 - 2024-07-30 00:58 023ebe9 **build(deps-dev): bump husky from 9.1.1 to 9.1.4**
 - 2024-07-26 00:49 b1fd420 **build(deps): bump preact from 10.23.0 to 10.23.1**
 - 2024-07-25 08:52 4419d13 **Merge pull request #62 from bgord/dependabot/npm_and_yarn/postcss-8.4.40**
