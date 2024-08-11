@@ -1,6 +1,17 @@
 # Changelog
+- 2024-08-11 13:04 71e85a0 **Merge pull request #73 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.4.0**
+- 2024-08-11 13:04 46b607c **Merge pull request #74 from bgord/dependabot/npm_and_yarn/knip-5.27.2**
+## 2024-08-11 13:04 
+- 2024-08-11 13:03 9180b2d **Merge pull request #68 from bgord/dependabot/npm_and_yarn/vitest-2.0.5**
+- 2024-08-11 13:03 6da895f **Merge pull request #71 from bgord/dependabot/npm_and_yarn/playwright/test-1.46.0**
+- 2024-08-11 13:03 3efd175 **Merge pull request #70 from bgord/dependabot/npm_and_yarn/postcss-8.4.41**
+- 2024-08-09 00:26 e935c18 **build(deps-dev): bump knip from 5.27.0 to 5.27.2**
+- 2024-08-08 00:47 6e54eee **build(deps-dev): bump @commitlint/cli from 19.3.0 to 19.4.0**
+- 2024-08-06 00:48 e53643a **build(deps-dev): bump @playwright/test from 1.45.3 to 1.46.0**
+- 2024-08-06 00:48 2f9f886 **build(deps-dev): bump postcss from 8.4.40 to 8.4.41**
+- 2024-08-01 00:32 30095ee **build(deps-dev): bump vitest from 2.0.4 to 2.0.5**
 - 2024-07-31 09:43 d45f35c **Merge pull request #67 from bgord/dependabot/npm_and_yarn/cspell-8.13.0**
-## 2024-07-31 09:43 
+- 2024-07-31 07:43 537180c **docs: generate CHANGELOG**
 - 2024-07-31 00:25 20a4e87 **build(deps-dev): bump cspell from 8.12.1 to 8.13.0**
 - 2024-07-30 13:05 8973ae4 **Merge pull request #64 from bgord/dependabot/npm_and_yarn/preact-10.23.1**
 - 2024-07-30 13:05 6838215 **Merge pull request #66 from bgord/dependabot/npm_and_yarn/husky-9.1.4**
