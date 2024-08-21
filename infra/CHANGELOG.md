@@ -1,7 +1,9 @@
 # Changelog
+- 2024-08-21 20:06 3ddfe5b **step: update to latest node 22.6**
+## 2024-08-21 20:06 
 - 2024-08-21 08:32 45e237a **Merge pull request #82 from bgord/dependabot/npm_and_yarn/husky-9.1.5**
-## 2024-08-21 08:32 
 - 2024-08-21 08:31 c24a215 **Merge pull request #81 from bgord/dependabot/npm_and_yarn/cspell-8.14.2**
+- 2024-08-21 06:32 7fec39c **docs: generate CHANGELOG**
 - 2024-08-21 01:09 4bbc977 **build(deps-dev): bump husky from 9.1.4 to 9.1.5**
 - 2024-08-21 01:09 3d35bfd **build(deps-dev): bump cspell from 8.14.1 to 8.14.2**
 - 2024-08-19 09:10 b1ea36d **Merge pull request #80 from bgord/dependabot/npm_and_yarn/cspell-8.14.1**
