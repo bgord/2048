@@ -1,6 +1,8 @@
 # Changelog
+- 2024-08-21 20:17 ab221c9 **step: bump bgord/scripts**
+## 2024-08-21 20:17 
 - 2024-08-21 20:06 3ddfe5b **step: update to latest node 22.6**
-## 2024-08-21 20:06 
+- 2024-08-21 18:06 bf223c1 **docs: generate CHANGELOG**
 - 2024-08-21 08:32 45e237a **Merge pull request #82 from bgord/dependabot/npm_and_yarn/husky-9.1.5**
 - 2024-08-21 08:31 c24a215 **Merge pull request #81 from bgord/dependabot/npm_and_yarn/cspell-8.14.2**
 - 2024-08-21 06:32 7fec39c **docs: generate CHANGELOG**
