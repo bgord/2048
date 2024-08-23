@@ -1,7 +1,10 @@
 # Changelog
+- 2024-08-23 08:39 387dfe5 **Merge pull request #83 from bgord/dependabot/npm_and_yarn/knip-5.27.3**
+## 2024-08-23 08:39 
+- 2024-08-22 00:34 6e084d5 **build(deps-dev): bump knip from 5.27.2 to 5.27.3**
 - 2024-08-21 20:17 ab221c9 **step: bump bgord/scripts**
-## 2024-08-21 20:17 
 - 2024-08-21 20:06 3ddfe5b **step: update to latest node 22.6**
+- 2024-08-21 18:17 6e4b87e **docs: generate CHANGELOG**
 - 2024-08-21 18:06 bf223c1 **docs: generate CHANGELOG**
 - 2024-08-21 08:32 45e237a **Merge pull request #82 from bgord/dependabot/npm_and_yarn/husky-9.1.5**
 - 2024-08-21 08:31 c24a215 **Merge pull request #81 from bgord/dependabot/npm_and_yarn/cspell-8.14.2**
