@@ -1,6 +1,8 @@
 # Changelog
+- 2024-08-24 17:00 3b7ac7f **step: bump bgord/scripts**
+## 2024-08-24 17:00 
 - 2024-08-24 16:04 94439c5 **refactor: update husky git hooks**
-## 2024-08-24 16:04 
+- 2024-08-24 14:04 db3bd3b **docs: generate CHANGELOG**
 - 2024-08-23 12:45 09dfaac **step: bump bgord/scripts**
 - 2024-08-23 10:45 7b9d48a **docs: generate CHANGELOG**
 - 2024-08-23 08:39 387dfe5 **Merge pull request #83 from bgord/dependabot/npm_and_yarn/knip-5.27.3**
