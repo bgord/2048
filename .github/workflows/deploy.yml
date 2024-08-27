@@ -61,7 +61,7 @@ jobs:
         run: ./bgord-scripts/build-prechecks.sh
 
       - name: Build the app
-        run: ./scripts/staging-project-build.sh
+        run: ./scripts/production-project-build.sh
 
       - name: Configure SSH
         run: |
