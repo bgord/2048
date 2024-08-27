@@ -1,6 +1,9 @@
 # Changelog
+- 2024-08-27 11:44 c54d39c **refactor: production migration**
+## 2024-08-27 11:44 
+- 2024-08-27 11:43 2075c29 **step: bump bgord/scripts**
 - 2024-08-27 10:52 7cc3350 **step: bump bgord/scripts**
-## 2024-08-27 10:52 
+- 2024-08-27 08:53 516a3a2 **docs: generate CHANGELOG**
 - 2024-08-27 08:26 300d66b **Merge pull request #84 from bgord/dependabot/npm_and_yarn/knip-5.27.4**
 - 2024-08-27 06:26 f10770a **docs: generate CHANGELOG**
 - 2024-08-26 00:12 78943e6 **build(deps-dev): bump knip from 5.27.3 to 5.27.4**
