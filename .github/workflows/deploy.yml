@@ -66,13 +66,13 @@ jobs:
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
-          echo "$SSH_KEY" > ~/.ssh/staging.key
-          chmod 600 ~/.ssh/staging.key
+          echo "$SSH_KEY" > ~/.ssh/production.key
+          chmod 600 ~/.ssh/production.key
           cat >>~/.ssh/config <<END
-          Host staging
+          Host production
             HostName $SSH_HOST
             User $SSH_USER
-            IdentityFile ~/.ssh/staging.key
+            IdentityFile ~/.ssh/production.key
             StrictHostKeyChecking no
           END
         env:
@@ -81,4 +81,4 @@ jobs:
           SSH_HOST: ${{ secrets.HOSTNAME }}
 
       - name: Sync source code
-        run: rsync -azP build/ staging:/var/www/${{ secrets.PROJECT_NAME }}
+        run: rsync -azP build/ production:/var/www/${{ secrets.PROJECT_NAME }}
