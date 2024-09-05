@@ -1,8 +1,13 @@
 # Changelog
+- 2024-09-05 11:25 f99bd4a **Merge pull request #90 from bgord/dependabot/npm_and_yarn/knip-5.29.2**
+- 2024-09-05 11:25 00e9015 **Merge pull request #91 from bgord/dependabot/npm_and_yarn/postcss-8.4.45**
+## 2024-09-05 11:25 
+- 2024-09-05 01:01 700c954 **build(deps-dev): bump postcss from 8.4.41 to 8.4.45**
+- 2024-09-04 00:19 b30304f **build(deps-dev): bump knip from 5.27.4 to 5.29.2**
 - 2024-08-29 09:03 6236de9 **Merge pull request #86 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.4.1**
-## 2024-08-29 09:03 
 - 2024-08-29 09:01 caa3096 **Merge pull request #85 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.4.1**
 - 2024-08-29 07:03 c67159f **build(deps-dev): bump @commitlint/cli from 19.4.0 to 19.4.1**
+- 2024-08-29 07:03 6933f06 **docs: generate CHANGELOG**
 - 2024-08-29 07:02 9bc4273 **docs: generate CHANGELOG**
 - 2024-08-29 00:41 4429a65 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-08-27 11:45 5f1c140 **refactor: production migration**
