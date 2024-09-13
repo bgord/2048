@@ -1,6 +1,9 @@
 # Changelog
+- 2024-09-13 11:35 d81c1c7 **Merge pull request #95 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.5.0**
+## 2024-09-13 11:35 
+- 2024-09-12 01:22 e4770e0 **build(deps-dev): bump @commitlint/cli from 19.4.1 to 19.5.0**
 - 2024-09-11 08:34 36cfd4f **Merge pull request #94 from bgord/dependabot/npm_and_yarn/knip-5.30.1**
-## 2024-09-11 08:34 
+- 2024-09-11 06:34 0be33fe **docs: generate CHANGELOG**
 - 2024-09-10 00:40 9b47ce7 **build(deps-dev): bump knip from 5.30.0 to 5.30.1**
 - 2024-09-09 10:43 bc29357 **Merge pull request #93 from bgord/dependabot/npm_and_yarn/knip-5.30.0**
 - 2024-09-09 10:43 1be65b4 **Merge pull request #92 from bgord/dependabot/npm_and_yarn/playwright/test-1.47.0**
