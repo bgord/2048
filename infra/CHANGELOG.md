@@ -1,6 +1,15 @@
 # Changelog
+- 2024-09-13 11:39 ff8d7bc **Merge pull request #98 from bgord/dependabot/npm_and_yarn/vitest-2.1.0**
+- 2024-09-13 11:39 4140bfc **Merge pull request #99 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.0**
+## 2024-09-13 11:39 
+- 2024-09-13 11:38 8f9c1ce **Merge pull request #97 from bgord/dependabot/npm_and_yarn/husky-9.1.6**
+- 2024-09-13 11:38 1998397 **Merge pull request #96 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.5.0**
 - 2024-09-13 11:35 d81c1c7 **Merge pull request #95 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.5.0**
-## 2024-09-13 11:35 
+- 2024-09-13 09:37 b982290 **build(deps-dev): bump @commitlint/config-conventional**
+- 2024-09-13 09:37 9a9a165 **build(deps-dev): bump @biomejs/biome from 1.8.3 to 1.9.0**
+- 2024-09-13 09:35 83ad31d **docs: generate CHANGELOG**
+- 2024-09-13 00:24 9e85f3f **build(deps-dev): bump vitest from 2.0.5 to 2.1.0**
+- 2024-09-12 01:22 ebde810 **build(deps-dev): bump husky from 9.1.5 to 9.1.6**
 - 2024-09-12 01:22 e4770e0 **build(deps-dev): bump @commitlint/cli from 19.4.1 to 19.5.0**
 - 2024-09-11 08:34 36cfd4f **Merge pull request #94 from bgord/dependabot/npm_and_yarn/knip-5.30.1**
 - 2024-09-11 06:34 0be33fe **docs: generate CHANGELOG**
