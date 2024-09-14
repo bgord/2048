@@ -1,10 +1,12 @@
 # Changelog
+- 2024-09-14 14:13 85aef63 **step: bump bgord/scripts**
+## 2024-09-14 14:13 
 - 2024-09-13 11:39 ff8d7bc **Merge pull request #98 from bgord/dependabot/npm_and_yarn/vitest-2.1.0**
 - 2024-09-13 11:39 4140bfc **Merge pull request #99 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.0**
-## 2024-09-13 11:39 
 - 2024-09-13 11:38 8f9c1ce **Merge pull request #97 from bgord/dependabot/npm_and_yarn/husky-9.1.6**
 - 2024-09-13 11:38 1998397 **Merge pull request #96 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.5.0**
 - 2024-09-13 11:35 d81c1c7 **Merge pull request #95 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.5.0**
+- 2024-09-13 09:39 70d8830 **docs: generate CHANGELOG**
 - 2024-09-13 09:37 b982290 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-09-13 09:37 9a9a165 **build(deps-dev): bump @biomejs/biome from 1.8.3 to 1.9.0**
 - 2024-09-13 09:35 83ad31d **docs: generate CHANGELOG**
