@@ -1,7 +1,9 @@
 # Changelog
+- 2024-09-14 16:43 34001de **step: bump bgord/scripts**
+## 2024-09-14 16:43 
 - 2024-09-14 16:32 157c9db **step: bump bgord/scripts**
-## 2024-09-14 16:32 
 - 2024-09-14 15:31 370b0b6 **step: remove standard version**
+- 2024-09-14 14:32 f73393e **docs: generate CHANGELOG**
 - 2024-09-14 14:13 85aef63 **step: bump bgord/scripts**
 - 2024-09-14 12:15 c7f745e **docs: generate CHANGELOG**
 - 2024-09-13 11:39 ff8d7bc **Merge pull request #98 from bgord/dependabot/npm_and_yarn/vitest-2.1.0**
