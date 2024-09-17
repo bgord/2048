@@ -25,7 +25,7 @@
     "postcss": "8.4.47",
     "postcss-cli": "11.0.0",
     "serve": "14.2.3",
-    "vitest": "2.1.0",
+    "vitest": "2.1.1",
     "cspell": "8.14.2",
     "shellcheck": "3.0.0"
   },
