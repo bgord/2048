@@ -1,11 +1,13 @@
 # Changelog
+- 2024-09-18 11:24 8dab6e2 **fix: codedql workflow**
+## 2024-09-18 11:24 
 - 2024-09-17 10:42 a33a2a9 **Merge pull request #105 from bgord/dependabot/npm_and_yarn/preact-10.24.0**
 - 2024-09-17 10:42 9919dc5 **Merge pull request #104 from bgord/dependabot/npm_and_yarn/playwright/test-1.47.1**
 - 2024-09-17 10:42 42b6648 **Merge pull request #103 from bgord/dependabot/npm_and_yarn/vitest-2.1.1**
-## 2024-09-17 10:42 
 - 2024-09-17 10:41 90f7209 **Merge pull request #100 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.1**
 - 2024-09-17 10:41 381ec0a **Merge pull request #101 from bgord/dependabot/npm_and_yarn/knip-5.30.2**
 - 2024-09-17 10:41 2ff3862 **Merge pull request #102 from bgord/dependabot/npm_and_yarn/postcss-8.4.47**
+- 2024-09-17 08:42 3a95b92 **docs: generate CHANGELOG**
 - 2024-09-16 00:18 f86a5a1 **build(deps): bump preact from 10.23.2 to 10.24.0**
 - 2024-09-16 00:18 b6fe8a5 **build(deps-dev): bump knip from 5.30.1 to 5.30.2**
 - 2024-09-16 00:18 a977814 **build(deps-dev): bump @playwright/test from 1.47.0 to 1.47.1**
