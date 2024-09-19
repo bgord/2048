@@ -30,7 +30,7 @@
     "shellcheck": "3.0.0"
   },
   "dependencies": {
-    "@bgord/design": "0.27.82",
+    "@bgord/design": "0.28.0",
     "@cassiozen/usestatemachine": "1.0.1",
     "lodash": "4.17.21",
     "preact": "10.24.0",
