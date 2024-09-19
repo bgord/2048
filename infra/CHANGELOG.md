@@ -1,6 +1,11 @@
 # Changelog
+- 2024-09-19 11:18 87a361e **Merge pull request #108 from bgord/dependabot/npm_and_yarn/bgord/design-0.28.0**
+## 2024-09-19 11:18 
+- 2024-09-19 11:17 7c5641b **Merge pull request #107 from bgord/dependabot/npm_and_yarn/cspell-8.14.4**
+- 2024-09-19 00:19 ce487d0 **build(deps): bump @bgord/design from 0.27.82 to 0.28.0**
+- 2024-09-19 00:19 3332cce **build(deps-dev): bump cspell from 8.14.2 to 8.14.4**
 - 2024-09-18 11:24 8dab6e2 **fix: codedql workflow**
-## 2024-09-18 11:24 
+- 2024-09-18 09:24 a52c027 **docs: generate CHANGELOG**
 - 2024-09-17 10:42 a33a2a9 **Merge pull request #105 from bgord/dependabot/npm_and_yarn/preact-10.24.0**
 - 2024-09-17 10:42 9919dc5 **Merge pull request #104 from bgord/dependabot/npm_and_yarn/playwright/test-1.47.1**
 - 2024-09-17 10:42 42b6648 **Merge pull request #103 from bgord/dependabot/npm_and_yarn/vitest-2.1.1**
