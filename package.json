@@ -15,7 +15,7 @@
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
     "@fullhuman/postcss-purgecss": "6.0.0",
-    "@playwright/test": "1.47.1",
+    "@playwright/test": "1.47.2",
     "@types/lodash": "4.17.7",
     "esbuild": "0.23.1",
     "gzip-cli": "1.2.0",
