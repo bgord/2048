@@ -1,6 +1,13 @@
 # Changelog
+- 2024-09-23 09:22 736aa72 **Merge pull request #112 from bgord/dependabot/npm_and_yarn/knip-5.30.4**
+- 2024-09-23 09:22 424a270 **Merge pull request #111 from bgord/dependabot/npm_and_yarn/playwright/test-1.47.2**
+- 2024-09-23 09:22 350a8e0 **Merge pull request #110 from bgord/dependabot/npm_and_yarn/esbuild-0.24.0**
+## 2024-09-23 09:22 
+- 2024-09-23 00:19 cea9aee **build(deps-dev): bump knip from 5.30.2 to 5.30.4**
+- 2024-09-23 00:19 b6e1acc **build(deps-dev): bump @playwright/test from 1.47.1 to 1.47.2**
+- 2024-09-23 00:19 a590078 **build(deps-dev): bump esbuild from 0.23.1 to 0.24.0**
 - 2024-09-21 16:16 bc47008 **Merge pull request #109 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.2**
-## 2024-09-21 16:16 
+- 2024-09-21 14:16 ab388bd **docs: generate CHANGELOG**
 - 2024-09-20 00:35 f3a4ce2 **build(deps-dev): bump @biomejs/biome from 1.9.1 to 1.9.2**
 - 2024-09-19 11:18 87a361e **Merge pull request #108 from bgord/dependabot/npm_and_yarn/bgord/design-0.28.0**
 - 2024-09-19 11:17 7c5641b **Merge pull request #107 from bgord/dependabot/npm_and_yarn/cspell-8.14.4**
