@@ -1,8 +1,15 @@
 # Changelog
+- 2024-09-25 09:56 e11f2e1 **Merge pull request #113 from bgord/dependabot/npm_and_yarn/knip-5.30.5**
+- 2024-09-25 09:56 a9e32d1 **Merge pull request #115 from bgord/dependabot/npm_and_yarn/preact-10.24.1**
+- 2024-09-25 09:56 277ba4d **Merge pull request #114 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.9**
+## 2024-09-25 09:56 
+- 2024-09-25 00:27 e5fb7ae **build(deps): bump preact from 10.24.0 to 10.24.1**
+- 2024-09-24 00:54 f0e23a8 **build(deps-dev): bump knip from 5.30.4 to 5.30.5**
+- 2024-09-24 00:54 aea97af **build(deps-dev): bump @types/lodash from 4.17.7 to 4.17.9**
 - 2024-09-23 09:22 736aa72 **Merge pull request #112 from bgord/dependabot/npm_and_yarn/knip-5.30.4**
 - 2024-09-23 09:22 424a270 **Merge pull request #111 from bgord/dependabot/npm_and_yarn/playwright/test-1.47.2**
 - 2024-09-23 09:22 350a8e0 **Merge pull request #110 from bgord/dependabot/npm_and_yarn/esbuild-0.24.0**
-## 2024-09-23 09:22 
+- 2024-09-23 07:23 79eb121 **docs: generate CHANGELOG**
 - 2024-09-23 00:19 cea9aee **build(deps-dev): bump knip from 5.30.2 to 5.30.4**
 - 2024-09-23 00:19 b6e1acc **build(deps-dev): bump @playwright/test from 1.47.1 to 1.47.2**
 - 2024-09-23 00:19 a590078 **build(deps-dev): bump esbuild from 0.23.1 to 0.24.0**
