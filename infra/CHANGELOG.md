@@ -1,6 +1,13 @@
 # Changelog
+- 2024-10-15 17:39 e1d9f9b **Merge pull request #129 from bgord/dependabot/npm_and_yarn/preact-10.24.3**
+- 2024-10-15 17:39 c3458be **Merge pull request #126 from bgord/dependabot/npm_and_yarn/knip-5.33.3**
+- 2024-10-15 17:39 423d11d **Merge pull request #128 from bgord/dependabot/npm_and_yarn/cspell-8.15.2**
+## 2024-10-15 17:39 
+- 2024-10-15 00:36 c17aced **build(deps): bump preact from 10.24.2 to 10.24.3**
+- 2024-10-15 00:36 7abba57 **build(deps-dev): bump cspell from 8.14.4 to 8.15.2**
 - 2024-10-13 14:43 b63ba40 **Update production-project-build.sh**
-## 2024-10-13 14:43 
+- 2024-10-13 12:43 cd36ea8 **docs: generate CHANGELOG**
+- 2024-10-11 01:05 e5366e1 **build(deps-dev): bump knip from 5.33.2 to 5.33.3**
 - 2024-10-09 12:09 10c5d7d **Merge pull request #125 from bgord/dependabot/npm_and_yarn/knip-5.33.2**
 - 2024-10-09 12:08 5304f97 **Merge pull request #124 from bgord/dependabot/npm_and_yarn/playwright/test-1.48.0**
 - 2024-10-09 10:09 cb1fa07 **docs: generate CHANGELOG**
