@@ -1,6 +1,9 @@
 # Changelog
+- 2024-10-23 08:32 3611047 **Merge pull request #136 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.12**
+## 2024-10-23 08:32 
 - 2024-10-23 08:29 28c6b1e **Merge pull request #135 from bgord/dependabot/npm_and_yarn/cspell-8.15.4**
-## 2024-10-23 08:29 
+- 2024-10-23 06:30 37f676f **build(deps-dev): bump @types/lodash from 4.17.10 to 4.17.12**
+- 2024-10-23 06:29 a6ecf37 **docs: generate CHANGELOG**
 - 2024-10-21 01:03 65405aa **build(deps-dev): bump cspell from 8.15.3 to 8.15.4**
 - 2024-10-19 15:45 f409420 **Merge pull request #134 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.4**
 - 2024-10-19 13:45 c49879b **docs: generate CHANGELOG**
