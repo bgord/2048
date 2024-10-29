@@ -1,6 +1,13 @@
 # Changelog
+- 2024-10-29 08:01 e1d8226 **Merge pull request #139 from bgord/dependabot/npm_and_yarn/vitest-2.1.4**
+- 2024-10-29 08:01 9830598 **Merge pull request #140 from bgord/dependabot/npm_and_yarn/knip-5.34.2**
+- 2024-10-29 08:01 1bf0bba **Merge pull request #138 from bgord/dependabot/npm_and_yarn/playwright/test-1.48.2**
+## 2024-10-29 08:01 
+- 2024-10-29 01:08 e1736cd **build(deps-dev): bump vitest from 2.1.3 to 2.1.4**
+- 2024-10-29 01:08 48bcb04 **build(deps-dev): bump knip from 5.34.0 to 5.34.2**
+- 2024-10-28 01:08 8017e2c **build(deps-dev): bump @playwright/test from 1.48.1 to 1.48.2**
 - 2024-10-25 10:00 9437106 **Merge pull request #137 from bgord/dependabot/npm_and_yarn/knip-5.34.0**
-## 2024-10-25 10:00 
+- 2024-10-25 08:00 0ad12ef **docs: generate CHANGELOG**
 - 2024-10-25 00:42 b54ccfa **build(deps-dev): bump knip from 5.33.3 to 5.34.0**
 - 2024-10-23 08:32 3611047 **Merge pull request #136 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.12**
 - 2024-10-23 08:29 28c6b1e **Merge pull request #135 from bgord/dependabot/npm_and_yarn/cspell-8.15.4**
