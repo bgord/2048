@@ -1,6 +1,9 @@
 # Changelog
+- 2024-10-31 08:56 4960d49 **Merge pull request #143 from bgord/dependabot/npm_and_yarn/types/lodash-4.17.13**
+## 2024-10-31 08:56 
 - 2024-10-31 08:55 c1e7906 **Merge pull request #142 from bgord/dependabot/npm_and_yarn/cspell-8.15.5**
-## 2024-10-31 08:55 
+- 2024-10-31 07:56 c6158a8 **build(deps-dev): bump @types/lodash from 4.17.12 to 4.17.13**
+- 2024-10-31 07:55 df3cad2 **docs: generate CHANGELOG**
 - 2024-10-31 00:20 75bf850 **build(deps-dev): bump cspell from 8.15.4 to 8.15.5**
 - 2024-10-29 08:01 e1d8226 **Merge pull request #139 from bgord/dependabot/npm_and_yarn/vitest-2.1.4**
 - 2024-10-29 08:01 9830598 **Merge pull request #140 from bgord/dependabot/npm_and_yarn/knip-5.34.2**
